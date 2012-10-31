@@ -2,7 +2,7 @@
 
 This is a tool to convert Emoji UTF-8 into the codes used by http://www.emoji-cheat-sheet.com/ and back again.
 
-Why would you want to do this? Read this _forthcoming_ blog post: ...
+Why would you want to do this? Read this blog post: http://mwunsch.tumblr.com/post/34721548842/we-need-to-talk-about-emoji
 
 ## tl;dr
 
