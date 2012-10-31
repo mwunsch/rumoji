@@ -5,20 +5,34 @@ require 'minitest/autorun'
 
 describe Rumoji do
   before do
-    @emoji_map = Hash[Rumoji::EMOJI_NAME_TO_CODEPOINT.map {|k,v| [k, [v.to_i(16)].pack("U")] }]
+    @poop = "💩"
+    @smile = "😄"
   end
 
   describe "#encode" do
     it "transforms emoji into cheat-sheet form" do
       key = :smile
-      Rumoji.encode("#{@emoji_map[key]}").must_equal ":#{key}:"
+      Rumoji.encode(@smile).must_equal ":smile:"
     end
   end
 
   describe "#decode" do
     it "transforms a cheat-sheet code into an emoji" do
-      poop_emoji = "💩"
-      Rumoji.decode(":poop:").must_equal "#{poop_emoji}"
+      Rumoji.decode(":poop:").must_equal @poop
+    end
+  end
+
+  describe "#encode_io" do
+    it "reads emoji from one stream and outputs a stream of cheat-sheet codes" do
+      io = StringIO.new("#{@smile}")
+      Rumoji.encode_io(io).read.must_equal ":smile:"
+    end
+  end
+
+  describe "#decode_io" do
+    it "reads a cheat-sheet code from one stream and outputs a stream of emoji" do
+      io = StringIO.new(":poop:")
+      Rumoji.decode_io(io).read.must_equal @poop
     end
   end
 end

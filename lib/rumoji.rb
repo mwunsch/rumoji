@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 require "rumoji/version"
+require 'stringio'
 
 module Rumoji
   extend self
@@ -18,6 +19,27 @@ module Rumoji
       duplicate.gsub! ":#{key}:", [value.to_i(16)].pack("U")
     end
     duplicate
+  end
+
+  def encode_io(input, output=StringIO.new(""))
+    input.each_codepoint do |codepoint|
+      emoji = codepoint.to_s(16).upcase
+      emoji_or_character = EMOJI_NAME_TO_CODEPOINT.has_value?(emoji) ? ":#{EMOJI_NAME_TO_CODEPOINT.key(emoji)}:" : [codepoint].pack("U")
+      output.write emoji_or_character
+    end
+    output.rewind
+    output
+  end
+
+  def decode_io(input, output=StringIO.new(""))
+    input.each do |word|
+      EMOJI_NAME_TO_CODEPOINT.each_pair do |key,value|
+        word.gsub!(":#{key}:", [value.to_i(16)].pack("U"))
+      end
+      output.write(word)
+    end
+    output.rewind
+    output
   end
 
   EMOJI_NAME_TO_CODEPOINT = {
