@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Rumoji::VERSION
   gem.authors       = ["Mark Wunsch"]
   gem.email         = ["mark@markwunsch.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Transcode emoji utf-8 characters into emoji-cheat-sheet form}
+  gem.summary       = %q{Transcode emoji utf-8 characters into emoji-cheat-sheet form}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
