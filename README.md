@@ -1,29 +1,26 @@
-# Rack::Emoji
+# Rumoji
 
-TODO: Write a gem description
+This is a tool to convert Emoji UTF-8 into the codes used by http://www.emoji-cheat-sheet.com/ and back again.
 
-## Installation
+Why would you want to do this? Read this _forthcoming_ blog post: ...
 
-Add this line to your application's Gemfile:
+## tl;dr
 
-    gem 'rack-emoji'
+>**Do not store emoji unicodes in your database. Store the human-friendly code and support the emoji-cheat-sheet.**
 
-And then execute:
+>By doing this, you can ensure that users across devices can see the author’s intention. You can always show users an image, but you can’t show them a range of characters their system does not support.
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rack-emoji
 
 ## Usage
 
-TODO: Write usage instructions here
+    Rumoji.encode(str)
+    # Takes a String, transforms Emoji into cheat-sheet codes
 
-## Contributing
+    Rumoji.decode(str)
+    # Does the reverse
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Thanks!
+
+## Copyright
+Copyright (c) 2009 - 2012 Mark Wunsch. Licensed under the MIT License.
+
