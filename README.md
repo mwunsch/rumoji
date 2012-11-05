@@ -1,6 +1,6 @@
 # Rumoji
 
-This is a tool to convert Emoji UTF-8 into the codes used by http://www.emoji-cheat-sheet.com/ and back again.
+This is a tool to convert Emoji Unicode codepoints into the human-friendly codes used by http://www.emoji-cheat-sheet.com/ and back again.
 
 Why would you want to do this? Read this blog post: http://mwunsch.tumblr.com/post/34721548842/we-need-to-talk-about-emoji
 
@@ -46,11 +46,11 @@ On the command line
     echo "But Rumoji makes encoding issues a :joy:" | ruby ./funfile.rb
     #=> But Rumoji makes encoding issues a 😂
 
-Implement the emoji codes from emoji-cheat-sheet.com using a tool like [gemoji](https://github.com/github/gemoji) along with Rumoji, and you'll easily be able to transform user input with raw emoji utf-8 into images you can show to all users.
+Implement the emoji codes from emoji-cheat-sheet.com using a tool like [gemoji](https://github.com/github/gemoji) along with Rumoji, and you'll easily be able to transform user input with raw emoji unicode into images you can show to all users.
 
 Currently, Rumoji only supports the _People_ characters in emoji-cheat-sheet, but that will change!
 
-_Having trouble discerning what's happening in this README?_ You might be on a device with NO emoji support! All the more reason to use Rumoji. Transcode the raw utf-8 into something users can understand across devices!
+_Having trouble discerning what's happening in this README?_ You might be on a device with NO emoji support! All the more reason to use Rumoji. Transcode the raw unicode into something users can understand across devices!
 
 Thanks!
 
