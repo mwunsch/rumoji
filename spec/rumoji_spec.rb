@@ -25,14 +25,14 @@ describe Rumoji do
   describe "#encode_io" do
     it "reads emoji from one stream and outputs a stream of cheat-sheet codes" do
       io = StringIO.new("#{@smile}")
-      Rumoji.encode_io(io).read.must_equal ":smile:"
+      Rumoji.encode_io(io).string.must_equal ":smile:"
     end
   end
 
   describe "#decode_io" do
     it "reads a cheat-sheet code from one stream and outputs a stream of emoji" do
       io = StringIO.new(":poop:")
-      Rumoji.decode_io(io).read.must_equal @poop
+      Rumoji.decode_io(io).string.must_equal @poop
     end
   end
 end
