@@ -327,7 +327,24 @@ module Rumoji
       self.new("\u{26C5}" , [:partly_sunny], "SUN BEHIND CLOUD")
     ]
 
-    ALL = PEOPLE | NATURE
+    OBJECTS = Set[
+      self.new("\u{1F38D}", [:bamboo], "PINE DECORATION"), # "Japanese new year's door decoration
+      self.new("\u{1F49D}", [:gift_heart], "HEART WITH RIBBON"),
+      self.new("\u{1F38E}", [:dolls], "JAPANESE DOLLS"), # "Japanese Hinamatsuri or girls' doll festival"
+      self.new("\u{1F49D}", [:gift_heart], "HEART WITH RIBBON"),
+      self.new("\u{1F392}", [:school_satchel]), # "Japanese school entrance ceremony"
+      self.new("\u{1F393}", [:mortar_board], "GRADUATION CAP"), # "graduation ceremony"
+      self.new("\u{1F38F}", [:flags], "CARP STREAMER"),
+      self.new("\u{1F386}", [:fireworks]),
+      self.new("\u{1F387}", [:sparkler], "FIREWORK SPARKLER"),
+      self.new("\u{1F390}", [:wind_chime]),
+      self.new("\u{1F391}", [:rice_scene], "MOON VIEWING CEREMONY"), # "Japanese Otsukimi harvest celebration"
+      self.new("\u{1F383}", [:jack_o_lantern], "JACK-O-LANTERN"), # "Hallowe'en"
+      self.new("\u{1F47B}", [:ghost]),
+      self.new("\u{1F385}", [:santa], "FATHER CHRISTMAS"), # "Santa Claus"
+    ]
+
+    ALL = PEOPLE | NATURE | OBJECTS
 
     def self.find(symbol)
       ALL.find {|emoji| emoji.include? symbol }
