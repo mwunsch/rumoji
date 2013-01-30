@@ -18,6 +18,15 @@ describe Rumoji::Emoji do
   it("converts to the emoji string") { subject.to_s.must_equal poo_string }
   it("converts to a hex code") { subject.hex.must_equal "1F4A9" }
 
+  describe "inferring the name" do
+    let (:symbol) { :person_with_pouting_face }
+    subject do
+      Rumoji::Emoji.new("\u{1F64E}", symbol)
+    end
+
+    it("infers the name from the symbol") { subject.name.must_equal "PERSON WITH POUTING FACE" }
+  end
+
   describe "with multiple codepoints" do
     # From the Unicode 6.2.0 standard:
     #   The regional indicator symbols in the range
