@@ -15,7 +15,7 @@ module Rumoji
   end
 
   def decode(str)
-    str.gsub(/:(\w+):/) {|sym| Emoji.find($1.intern).to_s }
+    str.gsub(/:(\S?\w+):/) {|sym| Emoji.find($1.intern).to_s }
   end
 
   def encode_io(readable, writeable=StringIO.new(""))
@@ -29,13 +29,9 @@ module Rumoji
 
   def decode_io(readable, writeable=StringIO.new(""))
     readable.each_line do |line|
-      writeable.write line.gsub(/:(\w+):/) {|sym| Emoji.find($1.intern).to_s }
+      writeable.write decode(line)
     end
     writeable
-  end
-
-  def codepoint_as_hex(codepoint)
-    codepoint.to_s(16).upcase
   end
 
 end
