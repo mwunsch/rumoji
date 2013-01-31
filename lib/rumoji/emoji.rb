@@ -10,8 +10,12 @@ module Rumoji
       @name = name || @cheat_codes.first.to_s.upcase.gsub("_", " ")
     end
 
-    def code
+    def symbol
       @cheat_codes.first
+    end
+
+    def code
+      ":#{symbol}:"
     end
 
     def include?(symbol)

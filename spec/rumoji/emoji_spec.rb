@@ -13,7 +13,7 @@ describe Rumoji::Emoji do
   end
 
   it("has a name") { subject.name.must_equal name }
-  it("has a cheat sheet code") { symbols.must_include subject.code } 
+  it("has a cheat sheet code") { symbols.must_include subject.code[1...-1].intern } 
   it("can test if it includes a cheat sheet code") { symbols.all?{|symbol| subject.include?(symbol) }.must_equal true }
   it("converts to the emoji string") { subject.to_s.must_equal poo_string }
   it("converts to a hex code") { subject.hex.must_equal "1F4A9" }
@@ -51,7 +51,8 @@ describe Rumoji::Emoji do
       Rumoji::Emoji.new(us_string, symbol, name)
     end
 
-    it("has one code") { subject.code.must_equal symbol }
+    it("has one symbol, representing the code") { subject.symbol.must_equal symbol }
+    it("has one cheat sheet code") { subject.code[1...-1].intern.must_equal symbol }
     it("includes the symbol") { subject.must_include symbol }
     it("transforms to the correct string") { subject.to_s.must_equal us_string }
   end
@@ -66,12 +67,12 @@ describe Rumoji::Emoji do
     end
 
     it "finds an emoji from a string" do
-      subject.find_by_string(smile_str).code.must_equal smile_sym
+      subject.find_by_string(smile_str).symbol.must_equal smile_sym
     end
 
     it "finds an emoji from a codepoint" do
       smile_str.codepoints.map do |point|
-        subject.find_by_codepoint(point).code.must_equal smile_sym
+        subject.find_by_codepoint(point).symbol.must_equal smile_sym
       end
     end
   end
