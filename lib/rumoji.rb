@@ -8,11 +8,14 @@ module Rumoji
 
   # Transform emoji into its cheat-sheet code
   def encode(str)
-    remapped_codepoints = str.codepoints.flat_map do |codepoint|
-      emoji = Emoji.find_by_codepoint(codepoint)
-      emoji ? emoji.code.codepoints.entries : codepoint
+    new_str = ""
+
+    str.scan(/.\u20e3?/) do |str|
+      emoji = Emoji.find_by_string(str)
+      new_str << (emoji ? emoji.code : str)
     end
-    remapped_codepoints.pack("U*")
+
+    new_str
   end
 
   # Transform a cheat-sheet code into an Emoji
