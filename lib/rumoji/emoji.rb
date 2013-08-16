@@ -23,7 +23,7 @@ module Rumoji
     end
 
     def to_s
-      @codepoints.to_a.pack("U*")
+      codepoints.pack("U*")
     end
 
     def hash
@@ -32,6 +32,10 @@ module Rumoji
 
     def hex
       @codepoints.map{|point| point.to_s(16).upcase }.join("-")
+    end
+
+    def codepoints
+      @codepoints.entries
     end
 
     autoload :PEOPLE, 'rumoji/emoji/people'
@@ -48,6 +52,10 @@ module Rumoji
 
     def self.find_by_string(string)
       ALL.find {|emoji| emoji.to_s == string }
+    end
+
+    def self.select_by_codepoint(codepoint)
+      ALL.select {|emoji| emoji.codepoints.include? codepoint }
     end
 
     def self.find_by_codepoint(codepoint)
