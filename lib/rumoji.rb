@@ -8,11 +8,8 @@ module Rumoji
 
   # Transform emoji into its cheat-sheet code
   def encode(str)
-    remapped_codepoints = str.codepoints.flat_map do |codepoint|
-      emoji = Emoji.find_by_codepoint(codepoint)
-      emoji ? emoji.code.codepoints.entries : codepoint
-    end
-    remapped_codepoints.pack("U*")
+    io = StringIO.new(str)
+    encode_io(io).string
   end
 
   # Transform a cheat-sheet code into an Emoji
@@ -21,12 +18,30 @@ module Rumoji
   end
 
   def encode_io(readable, writeable=StringIO.new(""))
-    readable.each_codepoint do |codepoint|
-      emoji = Emoji.find_by_codepoint(codepoint)
-      emoji_or_character = emoji ? emoji.code : [codepoint].pack("U")
-      writeable.write emoji_or_character
+    codepoints = readable.each_codepoint
+    previous_emoji = []
+
+    codepoints.each_with_object(writeable) do |codepoint, writer|
+      possible_emoji = Emoji.select_by_codepoint(codepoint)
+      last_emoji = previous_emoji.pop
+
+      sequence =  if last_emoji.nil? || !last_emoji.codepoints.include?(codepoint)
+                    if possible_emoji.empty?
+                      [codepoint].pack("U")
+                    else
+                      multiple_codepoint_emoji = possible_emoji.select(&:multiple?)
+                      if multiple_codepoint_emoji.empty?
+                        possible_emoji.first.code
+                      else
+                        previous_emoji.concat(multiple_codepoint_emoji) ; ""
+                      end
+                    end
+                  else
+                    last_emoji.code
+                  end
+
+      writer.write sequence
     end
-    writeable
   end
 
   def decode_io(readable, writeable=StringIO.new(""))
@@ -35,5 +50,8 @@ module Rumoji
     end
     writeable
   end
+
+private
+
 
 end

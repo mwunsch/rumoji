@@ -7,6 +7,8 @@ describe Rumoji do
   before do
     @poop = "💩"
     @smile = "😄"
+    @zero = "0⃣"
+    @us = "🇺🇸"
   end
 
   describe "#encode" do
@@ -27,12 +29,42 @@ describe Rumoji do
       io = StringIO.new("#{@smile}")
       Rumoji.encode_io(io).string.must_equal ":smile:"
     end
+
+    describe "with multiple codepoints" do
+      it "transforms a stream" do
+        io1 = StringIO.new("#{@zero}")
+        io2 = StringIO.new("#{@us}")
+        Rumoji.encode_io(io1).string.must_equal ":zero:"
+        Rumoji.encode_io(io2).string.must_equal ":us:"
+      end
+
+      it "transforms a stream of many emoji" do
+        num = ":one::two::three::four::five::six::seven::eight::nine::hash:"
+        emoji = StringIO.new("1⃣2⃣3⃣4⃣5⃣6⃣7⃣8⃣9⃣#⃣")
+        Rumoji.encode_io(emoji).string.must_equal num
+      end
+
+      describe "with leading and trailing characters" do
+        it "is able to pull multipoint emoji out of a sequence" do
+          io = StringIO.new("An example of a multipoint emoji is the #{@us} flag.")
+          Rumoji.encode_io(io).string.must_equal "An example of a multipoint emoji is the :us: flag."
+        end
+      end
+    end
+
   end
 
   describe "#decode_io" do
     it "reads a cheat-sheet code from one stream and outputs a stream of emoji" do
       io = StringIO.new(":poop:")
       Rumoji.decode_io(io).string.must_equal @poop
+    end
+
+    describe "with multiple codepoints" do
+      it "decodes a stream" do
+        io = StringIO.new(":zero:")
+        Rumoji.decode_io(io).string.must_equal @zero
+      end
     end
   end
 end
