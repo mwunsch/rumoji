@@ -18,19 +18,30 @@ module Rumoji
   end
 
   def encode_io(readable, writeable=StringIO.new(""))
-    codepoints = readable.each_codepoint.entries
-    codepoints.each_with_index do |codepoint, index|
+    codepoints = readable.each_codepoint
+    previous_emoji = []
+
+    codepoints.each_with_object(writeable) do |codepoint, writer|
       possible_emoji = Emoji.select_by_codepoint(codepoint)
-      sequence = if possible_emoji.empty?
-        [codepoint].pack("U")
-      elsif possible_emoji.size.eql?(1)
-        possible_emoji.first.code
-      else
-        find_multipoint_emoji_in_set(possible_emoji, codepoints[index + 1])
-      end
-      writeable.write sequence
+      last_emoji = previous_emoji.pop
+
+      sequence =  if last_emoji.nil? || !last_emoji.codepoints.include?(codepoint)
+                    if possible_emoji.empty?
+                      [codepoint].pack("U")
+                    else
+                      multiple_codepoint_emoji = possible_emoji.select(&:multiple?)
+                      if multiple_codepoint_emoji.empty?
+                        possible_emoji.first.code
+                      else
+                        previous_emoji.concat(multiple_codepoint_emoji) ; ""
+                      end
+                    end
+                  else
+                    last_emoji.code
+                  end
+
+      writer.write sequence
     end
-    writeable
   end
 
   def decode_io(readable, writeable=StringIO.new(""))
@@ -42,11 +53,5 @@ module Rumoji
 
 private
 
-  def find_multipoint_emoji_in_set(possible_emoji_set, next_codepoint)
-    if next_codepoint
-      emoji_or_nil = possible_emoji_set.find {|emoji| emoji.codepoints.include?(next_codepoint) }
-      emoji_or_nil.nil? ? "" : emoji_or_nil.code
-    end
-  end
 
 end

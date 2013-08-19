@@ -38,6 +38,12 @@ describe Rumoji do
         Rumoji.encode_io(io2).string.must_equal ":us:"
       end
 
+      it "transforms a stream of many emoji" do
+        num = ":one::two::three::four::five::six::seven::eight::nine::hash:"
+        emoji = StringIO.new("1⃣2⃣3⃣4⃣5⃣6⃣7⃣8⃣9⃣#⃣")
+        Rumoji.encode_io(emoji).string.must_equal num
+      end
+
       describe "with leading and trailing characters" do
         it "is able to pull multipoint emoji out of a sequence" do
           io = StringIO.new("An example of a multipoint emoji is the #{@us} flag.")

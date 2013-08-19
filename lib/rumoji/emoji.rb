@@ -38,6 +38,10 @@ module Rumoji
       @codepoints.entries
     end
 
+    def multiple?
+      codepoints.size > 1
+    end
+
     autoload :PEOPLE, 'rumoji/emoji/people'
     autoload :NATURE, 'rumoji/emoji/nature'
     autoload :OBJECTS, 'rumoji/emoji/objects'
@@ -55,7 +59,7 @@ module Rumoji
     end
 
     def self.select_by_codepoint(codepoint)
-      ALL.select {|emoji| emoji.codepoints.include? codepoint }
+      ALL.select {|emoji| emoji.codepoints.first.eql? codepoint }
     end
 
     def self.find_by_codepoint(codepoint)
