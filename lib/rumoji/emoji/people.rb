@@ -20,7 +20,7 @@ module Rumoji
       self.new("\u{1F60C}", [:satisfied], "RELIEVED FACE"),
       self.new("\u{1F601}", [:grin], "GRINNING FACE WITH SMILING EYES"),
       self.new("\u{1F609}", [:wink], "WINKING FACE"),
-      self.new("\u{1F61C}", [:wink2, :stuck_out_tongue_winking_eye], "FACE WITH STUCK OUT TONGUE AND WINKING EYE"), # "kidding, not serious"
+      self.new("\u{1F61C}", [:stuck_out_tongue_winking_eye, :wink2], "FACE WITH STUCK OUT TONGUE AND WINKING EYE"), # "kidding, not serious"
       self.new("\u{1F61D}", [:stuck_out_tongue_closed_eyes], "FACE WITH STUCK-OUT TONGUE AND TIGHTLY-CLOSED EYES"), # "kidding, not serious"
       self.new("\u{1F600}", [:grinning], "GRINNING FACE"),
       self.new("\u{1F617}", [:kissing], "KISSING FACE"),
@@ -40,7 +40,7 @@ module Rumoji
       self.new("\u{1F613}", [:sweat], "FACE WITH COLD SWEAT"),
       self.new("\u{1F629}", [:weary], "WEARY FACE"),
       self.new("\u{1F614}", [:pensive], "PENSIVE FACE"),
-      self.new("\u{1F61E}", [:dissapointed], "DISAPPOINTED FACE"),
+      self.new("\u{1F61E}", [:disappointed], "DISAPPOINTED FACE"),
       self.new("\u{1F616}", [:confounded], "CONFOUNDED FACE"),
       self.new("\u{1F628}", [:fearful], "FEARFUL FACE"),
       self.new("\u{1F630}", [:cold_sweat], "FACE WITH OPEN MOUTH AND COLD SWEAT"),

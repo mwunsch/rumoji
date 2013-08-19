@@ -97,7 +97,7 @@ module Rumoji
       self.new("\u{1F333}", [:deciduous_tree]),
       self.new("\u{1F330}", [:chestnut]),
       self.new("\u{1F331}", [:seedling]),
-      self.new("\u{1F33C}", [:blossum]), # "daisy"
+      self.new("\u{1F33C}", [:blossom]), # "daisy"
       self.new("\u{1F33E}", [:ear_of_rice]),
       self.new("\u{1F41A}", [:shell], "SPIRAL SHELL"),
       self.new("\u{1F310}", [:globe_with_meridians]), # "used to indicate international input source, world clocks with time zones, etc."
