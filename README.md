@@ -48,12 +48,10 @@ On the command line
 
 Implement the emoji codes from emoji-cheat-sheet.com using a tool like [gemoji](https://github.com/github/gemoji) along with Rumoji, and you'll easily be able to transform user input with raw emoji unicode into images you can show to all users.
 
-Currently, Rumoji only supports the _People_ and _Nature_ characters in emoji-cheat-sheet, but that will change!
-
 _Having trouble discerning what's happening in this README?_ You might be on a device with NO emoji support! All the more reason to use Rumoji. Transcode the raw unicode into something users can understand across devices!
 
 Thanks!
 
 ## Copyright
-Copyright (c) 2009 - 2012 Mark Wunsch. Licensed under the [MIT License](http://opensource.org/licenses/mit-license.php).
+Copyright (c) 2012 - 2013 Mark Wunsch. Licensed under the [MIT License](http://opensource.org/licenses/mit-license.php).
 
