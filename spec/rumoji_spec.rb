@@ -30,6 +30,13 @@ describe Rumoji do
       Rumoji.encode_io(io).string.must_equal ":smile:"
     end
 
+    it "keeps codepoints that match the beginnings of multi-codepoint emoji" do
+      text = "i like #hashtags and 1direction"
+      io   = StringIO.new(text)
+
+      Rumoji.encode_io(io).string.must_equal text
+    end
+
     describe "with multiple codepoints" do
       it "transforms a stream" do
         io1 = StringIO.new("#{@zero}")
