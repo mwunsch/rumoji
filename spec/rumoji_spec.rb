@@ -31,7 +31,7 @@ describe Rumoji do
     end
 
     it "keeps codepoints that match the beginnings of multi-codepoint emoji" do
-      text = "i like #hashtags and 1direction they are the #1 band"
+      text = "i like #hashtags and 1direction they are the #1 band. end with 9"
       io   = StringIO.new(text)
 
       Rumoji.encode_io(io).string.must_equal text
