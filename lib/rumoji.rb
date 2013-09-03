@@ -26,7 +26,7 @@ module Rumoji
       last_emoji = previous_emoji.pop
 
       sequence =  if last_emoji.nil? || !last_emoji.codepoints.include?(codepoint)
-                    if possible_emoji.empty?
+                    if possible_emoji.empty? || last_emoji
                       last_codepoint = last_emoji && last_emoji.codepoints.first
                       sequence_codepoints = [last_codepoint, codepoint].compact
                       sequence_codepoints.pack("U" * sequence_codepoints.size)
