@@ -26,10 +26,9 @@ module Rumoji
       last_emoji = previous_emoji.pop
 
       sequence =  if last_emoji.nil? || !last_emoji.codepoints.include?(codepoint)
-                    if possible_emoji.empty?
+                    if possible_emoji.empty? || last_emoji
                       last_codepoint = last_emoji && last_emoji.codepoints.first
-                      sequence_codepoints = [last_codepoint, codepoint].compact
-                      sequence_codepoints.pack("U" * sequence_codepoints.size)
+                      sequence_from_codepoints(last_codepoint, codepoint)
                     else
                       multiple_codepoint_emoji = possible_emoji.select(&:multiple?)
                       if multiple_codepoint_emoji.empty?
@@ -44,6 +43,14 @@ module Rumoji
 
       writer.write sequence
     end
+
+    # If the last character was the beginning of a possible emoji, tack the
+    # first codepoint onto the end.
+    if last_emoji = previous_emoji.pop
+      writeable.write sequence_from_codepoints(last_emoji.codepoints.first)
+    end
+
+    writeable
   end
 
   def decode_io(readable, writeable=StringIO.new(""))
@@ -55,5 +62,9 @@ module Rumoji
 
 private
 
+  def sequence_from_codepoints(*codepoints)
+    compacted = codepoints.flatten.compact
+    compacted.pack("U" * compacted.size)
+  end
 
 end
