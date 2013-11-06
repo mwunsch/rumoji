@@ -9,6 +9,7 @@ describe Rumoji do
     @smile = "😄"
     @zero = "0⃣"
     @us = "🇺🇸"
+    @non_potable_water = "🚱"
   end
 
   describe "#encode" do
@@ -21,6 +22,10 @@ describe Rumoji do
   describe "#decode" do
     it "transforms a cheat-sheet code into an emoji" do
       Rumoji.decode(":poop:").must_equal @poop
+    end
+
+    it "transforms a cheat-sheet code with a dash into an emoji" do
+      Rumoji.decode(":non-potable_water:").must_equal @non_potable_water
     end
   end
 
