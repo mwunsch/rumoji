@@ -16,6 +16,7 @@ describe Rumoji do
     it "transforms emoji into cheat-sheet form" do
       key = :smile
       Rumoji.encode(@smile).must_equal ":smile:"
+      Rumoji.encode("#{@smile}").must_equal ":smile:"
     end
   end
 
@@ -38,7 +39,6 @@ describe Rumoji do
     it "keeps codepoints that match the beginnings of multi-codepoint emoji" do
       text = "i like #hashtags and 1direction they are the #1 band. end with 9"
       io   = StringIO.new(text)
-
       Rumoji.encode_io(io).string.must_equal text
     end
 
@@ -66,6 +66,13 @@ describe Rumoji do
         it "is able to pull multipoint emoji out of a sequence" do
           io = StringIO.new("An example of a multipoint emoji is the #{@us} flag.")
           Rumoji.encode_io(io).string.must_equal "An example of a multipoint emoji is the :us: flag."
+        end
+      end
+
+      describe "with trailing emoji" do
+        it "writes characters that are in a multipoint emoji followed by an emoji" do
+          io = StringIO.new "I would like 0#{@poop}"
+          Rumoji.encode_io(io).string.must_equal "I would like 0:poop:"
         end
       end
     end

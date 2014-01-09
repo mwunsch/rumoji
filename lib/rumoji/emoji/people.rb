@@ -94,7 +94,7 @@ module Rumoji
       self.new("\u{1F3B5}", [:musical_note]), # "music, being in good mood"
       self.new("\u{1F525}", [:fire], "FIRE"),
       # Poop
-      self.new("\u{1F4A9}", [:hankey, :poop, :shit], "PILE OF POO"), # "dog dirt"
+      self.new("\u{1F4A9}", [:poop, :hankey, :shit], "PILE OF POO"), # "dog dirt"
       self.new("\u{1F44D}", [:thumbsup, :"+1"], "THUMBS UP SIGN"),
       self.new("\u{1F44E}", [:thumbsdown, :"-1"], "THUMBS DOWN SIGN"),
       self.new("\u{1F44C}", [:ok_hand], "OK HAND SIGN"),

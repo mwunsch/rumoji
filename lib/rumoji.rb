@@ -26,14 +26,12 @@ module Rumoji
       sequence =  if possible_emoji.empty?
                     # If this codepoint is not part of an emoji
                     # just write it back out, along with any previously stored codepoints.
-                    sequence_from_codepoints(previous_codepoints, codepoint).tap do
-                      previous_codepoints.clear
-                    end
+                    dump_codepoints_to_string(previous_codepoints << codepoint)
                   elsif !possible_emoji.any?(&:multiple?)
                     # If this codepoint is part of an emoji, but not one
                     # that contains multiple codepoints, write out the
-                    # first possiblity's cheat code.
-                    possible_emoji.first.code
+                    # first possiblity's cheat code and the previously stored codepoints
+                    dump_codepoints_to_string(previous_codepoints) << possible_emoji.first.code
                   else
                     # This codepoint is a part of an emoji with multiple
                     # codepoints, so push it onto the stack.
@@ -51,7 +49,7 @@ module Rumoji
     end
 
     # Write any remaining codepoints.
-    writeable.write sequence_from_codepoints(previous_codepoints) if previous_codepoints.any?
+    writeable.write dump_codepoints_to_string(previous_codepoints) if previous_codepoints.any?
 
     writeable
   end
@@ -65,9 +63,10 @@ module Rumoji
 
 private
 
-  def sequence_from_codepoints(*codepoints)
-    compacted = codepoints.flatten.compact
-    compacted.pack("U*")
+  def dump_codepoints_to_string(codepoints)
+    codepoints.pack("U*").tap do
+      codepoints.clear
+    end
   end
 
 end
