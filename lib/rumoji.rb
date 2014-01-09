@@ -18,37 +18,40 @@ module Rumoji
   end
 
   def encode_io(readable, writeable=StringIO.new(""))
-    codepoints = readable.each_codepoint
-    previous_emoji = []
+    previous_codepoints = []
 
-    codepoints.each_with_object(writeable) do |codepoint, writer|
+    readable.each_codepoint do |codepoint|
       possible_emoji = Emoji.select_by_codepoint(codepoint)
-      last_emoji = previous_emoji.pop
 
-      sequence =  if last_emoji.nil? || !last_emoji.codepoints.include?(codepoint)
-                    if possible_emoji.empty? || last_emoji
-                      last_codepoint = last_emoji && last_emoji.codepoints.first
-                      sequence_from_codepoints(last_codepoint, codepoint)
-                    else
-                      multiple_codepoint_emoji = possible_emoji.select(&:multiple?)
-                      if multiple_codepoint_emoji.empty?
-                        possible_emoji.first.code
-                      else
-                        previous_emoji.concat(multiple_codepoint_emoji) ; ""
-                      end
+      sequence =  if possible_emoji.empty?
+                    # If this codepoint is not part of an emoji
+                    # just write it back out, along with any previously stored codepoints.
+                    sequence_from_codepoints(previous_codepoints, codepoint).tap do
+                      previous_codepoints.clear
                     end
+                  elsif !possible_emoji.any?(&:multiple?)
+                    # If this codepoint is part of an emoji, but not one
+                    # that contains multiple codepoints, write out the
+                    # first possiblity's cheat code.
+                    possible_emoji.first.code
                   else
-                    last_emoji.code
+                    # This codepoint is a part of an emoji with multiple
+                    # codepoints, so push it onto the stack.
+                    previous_codepoints.push(codepoint)
+                    # Check and see if this completes the emoji, otherwise,
+                    # write out an empty string.
+                    if found = possible_emoji.find {|e| e.codepoints.eql?(previous_codepoints) }
+                      previous_codepoints.clear and found.code
+                    else
+                      ""
+                    end
                   end
 
-      writer.write sequence
+      writeable.write sequence
     end
 
-    # If the last character was the beginning of a possible emoji, tack the
-    # first codepoint onto the end.
-    if last_emoji = previous_emoji.pop
-      writeable.write sequence_from_codepoints(last_emoji.codepoints.first)
-    end
+    # Write any remaining codepoints.
+    writeable.write sequence_from_codepoints(previous_codepoints) if previous_codepoints.any?
 
     writeable
   end
@@ -64,7 +67,7 @@ private
 
   def sequence_from_codepoints(*codepoints)
     compacted = codepoints.flatten.compact
-    compacted.pack("U" * compacted.size)
+    compacted.pack("U*")
   end
 
 end

@@ -7,7 +7,7 @@ describe Rumoji do
   before do
     @poop = "💩"
     @smile = "😄"
-    @zero = "0⃣"
+    @zero = "0️⃣"
     @us = "🇺🇸"
     @non_potable_water = "🚱"
   end
@@ -51,9 +51,15 @@ describe Rumoji do
       end
 
       it "transforms a stream of many emoji" do
-        num = ":one::two::three::four::five::six::seven::eight::nine::hash:"
-        emoji = StringIO.new("1⃣2⃣3⃣4⃣5⃣6⃣7⃣8⃣9⃣#⃣")
+        num = ":one: :two: :three: :four: :five: :six: :seven: :eight: :nine: :zero: :hash:"
+        emoji = StringIO.new"1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 0️⃣ #️⃣"
         Rumoji.encode_io(emoji).string.must_equal num
+      end
+
+      it "does not encode double digits" do
+        num = ":zero: :one: :two: :three: :four: :five: :six: :seven: :eight: :nine: :hash:"
+        double_digits = StringIO.new("00 11 22 33 44 55 66 77 88 99 ##")
+        Rumoji.encode_io(double_digits).string.wont_equal num
       end
 
       describe "with leading and trailing characters" do

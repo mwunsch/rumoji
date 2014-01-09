@@ -59,11 +59,12 @@ module Rumoji
     end
 
     def self.select_by_codepoint(codepoint)
-      ALL.select {|emoji| emoji.codepoints.first.eql? codepoint }
+      ALL.select {|emoji| emoji.codepoints.include? codepoint }
     end
 
     def self.find_by_codepoint(codepoint)
       ALL.find {|emoji| emoji.hex == codepoint.to_s(16).upcase }
     end
+
   end
 end
