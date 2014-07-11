@@ -29,6 +29,10 @@ describe Rumoji do
       Rumoji.decode("::poop:").must_equal ':' + @poop
     end
 
+    it "transforms a cheat-sheet code into an emoji with space" do
+      Rumoji.decode(": poop:").must_equal ': poop:'
+    end
+
     it "transforms a cheat-sheet code with a dash into an emoji" do
       Rumoji.decode(":non-potable_water:").must_equal @non_potable_water
     end
