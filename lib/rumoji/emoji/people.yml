@@ -1,0 +1,184 @@
+# coding: utf-8
+# people symbols
+
+smile:                        "\U0001F604" # SMILING FACE WITH OPEN MOUTH AND SMILING EYES
+laughing:                     "\U0001F606" # SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES
+blush:                        "\U0001F60A" # SMILING FACE WITH SMILING EYES
+smiley:                       "\U0001F603" # SMILING FACE WITH OPEN MOUTH
+relaxed:                      "\U0000263A" # WHITE SMILING FACE
+smirk:                        "\U0001F60F" # SMIRKING FACE
+heart_eyes:                   "\U0001F60D" # SMILING FACE WITH HEART-SHAPED EYES
+kissing_heart:                "\U0001F618" # FACE THROWING KISS
+kissing_closed_eyes:          "\U0001F61A" # KISSING FACE WITH CLOSED EYES
+flushed:                      "\U0001F633" # FLUSHED FACE
+relieved:                     "\U0001F625" # DISAPPOINTED BUT RELIEVED FACE
+satisfied:                    "\U0001F60C" # RELIEVED FACE
+grin:                         "\U0001F601" # GRINNING FACE WITH SMILING EYES
+wink:                         "\U0001F609" # WINKING FACE
+stuck_out_tongue_winking_eye: "\U0001F61C" # FACE WITH STUCK OUT TONGUE AND WINKING EYE - kidding, not serious
+wink2:                        "\U0001F61C" # FACE WITH STUCK OUT TONGUE AND WINKING EYE - kidding, not serious
+stuck_out_tongue_closed_eyes: "\U0001F61D" # FACE WITH STUCK-OUT TONGUE AND TIGHTLY-CLOSED EYES - kidding, not serious
+grinning:                     "\U0001F600" # GRINNING FACE
+kissing:                      "\U0001F617" # KISSING FACE
+kissing_smiling_eyes:         "\U0001F619" # KISSING FACE WITH SMILING EYES
+stuck_out_tongue:             "\U0001F61B" # FACE WITH STUCK-OUT TONGUE
+sleeping:                     "\U0001F634" # SLEEPING FACE
+worried:                      "\U0001F61F" # WORRIED FACE
+frowning:                     "\U0001F626" # FROWNING FACE WITH OPEN MOUTH
+anguished:                    "\U0001F627" # ANGUISHED FACE
+open_mouth:                   "\U0001F62E" # FACE WITH OPEN MOUTH
+grimacing:                    "\U0001F62C" # GRIMACING FACE
+confused:                     "\U0001F615" # CONFUSED FACE
+hushed:                       "\U0001F62F" # HUSHED FACE
+expressionless:               "\U0001F611" # EXPRESSIONLESS FACE
+unamused:                     "\U0001F612" # UNAMUSED FACE
+sweat_smile:                  "\U0001F605" # SMILING FACE WITH OPEN MOUTH AND COLD SWEAT
+sweat:                        "\U0001F613" # FACE WITH COLD SWEAT
+weary:                        "\U0001F629" # WEARY FACE
+pensive:                      "\U0001F614" # PENSIVE FACE
+disappointed:                 "\U0001F61E" # DISAPPOINTED FACE
+confounded:                   "\U0001F616" # CONFOUNDED FACE
+fearful:                      "\U0001F628" # FEARFUL FACE
+cold_sweat:                   "\U0001F630" # FACE WITH OPEN MOUTH AND COLD SWEAT
+persevere:                    "\U0001F623" # PERSEVERING FACE
+cry:                          "\U0001F622" # CRYING FACE
+sob:                          "\U0001F62D" # LOUDLY CRYING FACE
+joy:                          "\U0001F602" # FACE WITH TEARS OF JOY
+astonished:                   "\U0001F632" # ASTONISHED FACE
+scream:                       "\U0001F631" # FACE SCREAMING IN FEAR
+tired_face:                   "\U0001F62B"
+angry:                        "\U0001F620" # ANGRY FACE
+rage:                         "\U0001F621" # POUTING FACE
+triumph:                      "\U0001F624" # FACE WITH LOOK OF TRIUMPH
+sleepy:                       "\U0001F62A" # SLEEPY FACE
+yum:                          "\U0001F60B" # FACE SAVOURING DELICIOUS FOOD
+mask:                         "\U0001F637" # FACE WITH MEDICAL MASK
+sunglasses:                   "\U0001F60E" # SMILING FACE WITH SUNGLASSES
+dizzy_face:                   "\U0001F635"
+imp:                          "\U0001F47F"
+smiling_imp:                  "\U0001F608" # SMILING FACE WITH HORNS
+neutral_face:                 "\U0001F610"
+no_mouth:                     "\U0001F636" # FACE WITHOUT MOUTH
+innocent:                     "\U0001F607" # SMILING FACE WITH HALO
+alien:                        "\U0001F47D" # EXTRATERRESTRIAL ALIEN
+yellow_heart:                 "\U0001F49B"
+blue_heart:                   "\U0001F499"
+purple_heart:                 "\U0001F49C"
+heart:                        "\U00002764"  # HEAVY BLACK HEART
+green_heart:                  "\U0001F49A"
+broken_heart:                 "\U0001F494"
+heartbeat:                    "\U0001F493" # BEATING HEART
+heartpulse:                   "\U0001F497" # GROWING HEART
+two_hearts:                   "\U0001F495"
+revolving_hearts:             "\U0001F49E"
+cupid:                        "\U0001F498" # HEART WITH ARROW
+sparkling_heart:              "\U0001F496"
+sparkles:                     "\U00002728"
+star:                         "\U00002B50"  # WHITE MEDIUM STAR
+star2:                        "\U0001F31F" # GLOWING STAR
+dizzy:                        "\U0001F4AB" # DIZZY SYMBOL - circling stars, squeans
+boom:                         "\U0001F4A5" # COLLISION SYMBOL
+collision:                    "\U0001F4A5" # COLLISION SYMBOL
+anger:                        "\U0001F4A2" # ANGER SYMBOL
+exclamation:                  "\U00002757"  # HEAVY EXCLAMATION MARK SYMBOL
+question:                     "\U00002753"  # BLACK QUESTION MARK ORNAMENT
+grey_exclamation:             "\U00002755"  # WHITE EXCLAMATION MARK ORNAMENT
+grey_question:                "\U00002754"  # WHITE QUESTION MARK ORNAMENT
+zzz:                          "\U0001F4A4" # SLEEPING SYMBOL
+dash:                         "\U0001F4A8" # DASH SYMBOL # "running dash, briffits"
+sweat_drops:                  "\U0001F4A6" # SPLASHING SWEAT SYMBOL # "plewds"
+notes:                        "\U0001F3B6" # MULTIPLE MUSICAL NOTES - dancing notes, mood, melody
+musical_note:                 "\U0001F3B5" # - music, being in good mood
+fire:                         "\U0001F525" # FIRE
+# Poop
+poop:                         "\U0001F4A9" # PILE OF POO - dog dirt
+hankey:                       "\U0001F4A9" # PILE OF POO - dog dirt
+shit:                         "\U0001F4A9" # PILE OF POO - dog dirt
+thumbsup:                     "\U0001F44D" # THUMBS UP SIGN
++1:                           "\U0001F44D"
+thumbsdown:                   "\U0001F44E" # THUMBS DOWN SIGN
+-1:                           "\U0001F44E"
+ok_hand:                      "\U0001F44C" # OK HAND SIGN
+punch:                        "\U0001F44A" # FISTED HAND SIGN - punch
+facepunch:                    "\U0001F44A" # FISTED HAND SIGN - punch
+fist:                         "\U0000270A"  # RAISED FIST
+v:                            "\U0000270C"  # VICTORY HAND
+wave:                         "\U0001F44B" # WAVING HAND SIGN
+hand:                         "\U0000270B"  # RAISED HAND
+open_hands:                   "\U0001F450" # OPEN HANDS SIGN
+point_up:                     "\U0000261D"  # WHITE UP POINTING INDEX
+point_down:                   "\U0001F447" # WHITE DOWN POINTING BACKHAND INDEX
+point_left:                   "\U0001F448" # WHITE LEFT POINTING BACKHAND INDEX
+point_right:                  "\U0001F449" # WHITE RIGHT POINTING BACKHAND INDEX
+raised_hands:                 "\U0001F64C" # PERSON RAISING BOTH HANDS IN CELEBRATION - banzai!
+pray:                         "\U0001F64F" # PERSON WITH FOLDED HANDS - can indicate sorrow or regret; can indicate pleading
+point_up_2:                   "\U0001F446" # WHITE UP POINTING BACKHAND INDEX
+clap:                         "\U0001F44F" # CLAPPING HANDS SIGN
+muscle:                       "\U0001F4AA" # FLEXED BICEPS # "strong, muscled"
+walking:                      "\U0001F6B6" # PEDESTRIAN
+runner:                       "\U0001F3C3"
+running:                      "\U0001F3C3"
+couple:                       "\U0001F46B" # MAN AND WOMAN HOLDING HANDS
+family:                       "\U0001F46A"
+two_men_holding_hands:        "\U0001F46C"
+two_women_holding_hands:      "\U0001F46D"
+dancer:                       "\U0001F483"
+dancers:                      "\U0001F46F" # WOMAN WITH BUNNY EARS
+ok_woman:                     "\U0001F646" # FACE WITH OK GESTURE
+no_good:                      "\U0001F645" # FACE WITH NO GOOD GESTURE
+information_desk_person:      "\U0001F481"
+raised_hand:                  "\U0001F64B" # HAPPY PERSON RAISING ONE HAND
+bride_with_veil:              "\U0001F470"
+person_with_pouting_face:     "\U0001F64E"
+person_frowning:              "\U0001F64D"
+bow:                          "\U0001F647" # PERSON BOWING DEEPLY
+couplekiss:                   "\U0001F48F" # KISS # "two people kissing"
+couple_with_heart:            "\U0001F491"
+massage:                      "\U0001F486" # FACE MASSAGE
+haircut:                      "\U0001F487" # "usually indicates a beauty parlor"
+nail_care:                    "\U0001F485" # NAIL POLISH # "manicure, nail care"
+boy:                          "\U0001F466"
+girl:                         "\U0001F467"
+woman:                        "\U0001F469"
+man:                          "\U0001F468"
+baby:                         "\U0001F476"
+older_woman:                  "\U0001F475"
+older_man:                    "\U0001F474"
+person_with_blond_hair:       "\U0001F471"
+man_with_gua_pi_mao:          "\U0001F472"
+man_with_turban:              "\U0001F473"
+construction_worker:          "\U0001F477"
+cop:                          "\U0001F46E" # POLICE OFFICER
+angel:                        "\U0001F47C" # BABY ANGEL
+princess:                     "\U0001F478"
+# Cats
+smiley_cat:                   "\U0001F63A" # SMILING CAT FACE WITH OPEN MOUTH
+smile_cat:                    "\U0001F638" # GRINNING CAT FACE WITH SMILING EYES
+heart_eyes_cat:               "\U0001F63B" # SMILING CAT FACE WITH HEART-SHAPED EYES
+kissing_cat:                  "\U0001F63D" # KISSING CAT FACE WITH CLOSED EYES
+smirk_cat:                    "\U0001F63C" # CAT FACE WITH WRY SMILE
+scream_cat:                   "\U0001F640" # WEARY CAT FACE
+crying_cat_face:              "\U0001F63F" # CRYING CAT FACE
+joy_cat:                      "\U0001F639" # CAT FACE WITH TEARS OF JOY
+pouting_cat:                  "\U0001F63E" # POUTING CAT FACE
+japanese_ogre:                "\U0001F479"
+japanese_goblin:              "\U0001F47A"
+# Monkeys
+see_no_evil:                  "\U0001F648" # SEE-NO-EVIL MONKEY
+hear_no_evil:                 "\U0001F649" # HEAR-NO-EVIL MONKEY
+speak_no_evil:                "\U0001F64A" # SPEAK-NO-EVIL MONKEY
+guardsman:                    "\U0001F482"
+skull:                        "\U0001F480"
+feet:                         "\U0001F463" # FOOTPRINTS
+lips:                         "\U0001F444" # MOUTH
+kiss:                         "\U0001F48B" # KISS MARK - lips
+droplet:                      "\U0001F4A7" # - represents a drop of sweat or drop of water
+ear:                          "\U0001F442"
+eyes:                         "\U0001F440"
+nose:                         "\U0001F443"
+tongue:                       "\U0001F445"
+love_letter:                  "\U0001F48C"
+bust_in_silhouette:           "\U0001F464" # "guest account"
+busts_in_silhouette:          "\U0001F465" # "accounts"
+speech_balloon:               "\U0001F4AC" # "comic book conversation bubble"
+thought_balloon:              "\U0001F4AD"
