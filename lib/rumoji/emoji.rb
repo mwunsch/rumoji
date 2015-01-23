@@ -1,4 +1,7 @@
 # -*- encoding: utf-8 -*-
+
+require 'yaml'
+
 module Rumoji
   class Emoji
 
@@ -42,13 +45,11 @@ module Rumoji
       codepoints.size > 1
     end
 
-    autoload :PEOPLE, 'rumoji/emoji/people'
-    autoload :NATURE, 'rumoji/emoji/nature'
-    autoload :OBJECTS, 'rumoji/emoji/objects'
-    autoload :PLACES, 'rumoji/emoji/places'
-    autoload :SYMBOLS, 'rumoji/emoji/symbols'
-
-    ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS
+    ALL = Dir["#{File.dirname(__FILE__)}/emoji/*.yml"].map do |file|
+      const = self.const_set(File.basename(file, '.yml').upcase, Set[])
+      YAML.load_file(file).each { |k, v| const << self.new(v , [k.to_s.to_sym]) }
+      const
+    end.inject(:|)
 
     def self.find(symbol)
       ALL.find {|emoji| emoji.include? symbol }
