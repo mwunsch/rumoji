@@ -1,0 +1,119 @@
+# coding: utf-8
+# nature symbols
+
+sunny:                        "\U00002600" # BLACK SUN WITH RAYS
+umbrella:                     "\U00002614" # UMBRELLA WITH RAIN DROPS
+cloud:                        "\U00002601"
+snowflake:                    "\U00002744"
+snowman:                      "\U000026C4" # SNOWMAN WITHOUT SNOW
+zap:                          "\U000026A1" # HIGH VOLTAGE SIGN
+cyclone:                      "\U0001F300" # typhoon, hurricane
+foggy:                        "\U0001F301"
+ocean:                        "\U0001F30A" # WATER WAVE
+# Animals
+cat:                          "\U0001F431" # CAT FACE
+dog:                          "\U0001F436" # DOG FACE
+mouse:                        "\U0001F42D" # MOUSE FACE
+hamster:                      "\U0001F439" # HAMSTER FACE
+rabbit:                       "\U0001F430" # RABBIT FACE
+wolf:                         "\U0001F43A" # WOLF FACE
+frog:                         "\U0001F438" # FROG FACE
+tiger:                        "\U0001F42F" # TIGER FACE
+koala:                        "\U0001F428"
+bear:                         "\U0001F43B" # BEAR FACE
+pig:                          "\U0001F437" # PIG FACE
+pig_nose:                     "\U0001F43D"
+cow:                          "\U0001F42E" # COW FACE
+boar:                         "\U0001F417"
+monkey_face:                  "\U0001F435"
+monkey:                       "\U0001F412"
+horse:                        "\U0001F434" # HORSE FACE
+racehorse:                    "\U0001F40E" # HORSE
+camel:                        "\U0001F42B" # BACTRIAN CAMEL - has two humps
+sheep:                        "\U0001F411"
+elephant:                     "\U0001F418"
+panda_face:                   "\U0001F43C"
+snake:                        "\U0001F40D"
+bird:                         "\U0001F426"
+baby_chick:                   "\U0001F424"
+hatched_chick:                "\U0001F425" # FRONT-FACING BABY CHICK
+hatching_chick:               "\U0001F423"
+chicken:                      "\U0001F414"
+penguin:                      "\U0001F427"
+turtle:                       "\U0001F422"
+bug:                          "\U0001F41B"
+honeybee:                     "\U0001F41D"
+ant:                          "\U0001F41C"
+beetle:                       "\U0001F41E" # LADY BEETLE - ladybird, ladybug, coccinellids
+snail:                        "\U0001F40C"
+octopus:                      "\U0001F419"
+tropical_fish:                "\U0001F420"
+fish:                         "\U0001F41F"
+whale:                        "\U0001F433" # SPOUTING WHALE
+whale2:                       "\U0001F40B" # WHALE
+dolphin:                      "\U0001F42C"
+cow2:                         "\U0001F404" # COW
+ram:                          "\U0001F40F"
+rat:                          "\U0001F400"
+water_buffalo:                "\U0001F403"
+tiger2:                       "\U0001F405" # TIGER
+dragon:                       "\U0001F407" # RABBIT
+dragon:                       "\U0001F409"
+goat:                         "\U0001F410"
+rooster:                      "\U0001F413"
+dog2:                         "\U0001F415" # DOG
+pig2:                         "\U0001F416" # PIG
+mouse2:                       "\U0001F401" # MOUSE
+ox:                           "\U0001F402"
+dragon_face:                  "\U0001F432"
+blowfish:                     "\U0001F421"
+crocodile:                    "\U0001F40A"
+dromedary_camel:              "\U0001F42A" # - has a single hump
+leopard:                      "\U0001F406"
+cat2:                         "\U0001F408" # CAT
+poodle:                       "\U0001F429"
+paw_prints:                   "\U0001F43E"
+# Flowers
+bouquet:                      "\U0001F490"
+cherry_blossom:               "\U0001F338"
+tulip:                        "\U0001F337"
+four_leaf_clover:             "\U0001F340"
+rose:                         "\U0001F339"
+sunflower:                    "\U0001F33B"
+hibiscus:                     "\U0001F33A"
+maple_leaf:                   "\U0001F341"
+leaves:                       "\U0001F343" # LEAF FLUTTERING IN WIND
+fallen_leaf:                  "\U0001F342"
+herb:                         "\U0001F33F"
+mushroom:                     "\U0001F344"
+cactus:                       "\U0001F335"
+palm_tree:                    "\U0001F334"
+evergreen_tree:               "\U0001F332"
+deciduous_tree:               "\U0001F333"
+chestnut:                     "\U0001F330"
+seedling:                     "\U0001F331"
+blossom:                      "\U0001F33C" # - daisy
+ear_of_rice:                  "\U0001F33E"
+shell:                        "\U0001F41A" # SPIRAL SHELL
+globe_with_meridians:         "\U0001F310" # - used to indicate international input source, world clocks with time zones, etc.
+# Moon
+sun_with_face:                "\U0001F31E"
+full_moon_with_face:          "\U0001F31D"
+new_moon_with_face:           "\U0001F31A"
+new_moon:                     "\U0001F311" # NEW MOON SYMBOL
+waxing_crescent_moon:         "\U0001F312" # WAXING CRESCENT MOON SYMBOL
+first_quarter_moon:           "\U0001F313" # FIRST QUARTER MOON SYMBOL - half moon
+waxing_gibbous_moon:          "\U0001F314" # WAXING GIBBOUS MOON SYMBOL - waxing moon
+full_moon:                    "\U0001F315" # FULL MOON SYMBOL
+waning_gibbous_moon:          "\U0001F316" # WAINING GIBBOUS MOON SYMBOL
+last_quarter_moon:            "\U0001F317" # LAST QUARTER MOON SYMBOL
+waning_crescent_moon:         "\U0001F318" # WANING CRESCENT MOON SYMBOL
+last_quarter_moon_with_face:  "\U0001F31C"
+first_quarter_moon_with_face: "\U0001F31B"
+moon:                         "\U0001F319" # CRESCENT MOON - may indicate either the first or last quarter moon
+earth_africa:                 "\U0001F30D" # EARTH GLOBE EUROPE-AFRICA
+earth_americas:               "\U0001F30E" # EARTH GLOBE AMERICAS
+earth_asia:                   "\U0001F30F" # EARTH GLOBE ASIA-AUSTRALIA
+volcano:                      "\U0001F30B"
+milky_way:                    "\U0001F30C"
+partly_sunny:                 "\U000026C5" # SUN BEHIND CLOUD

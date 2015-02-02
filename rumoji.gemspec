@@ -1,7 +1,7 @@
-# -*- encoding: utf-8 -*-
+# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rumoji/version'
+require 'rumoji'
 
 Gem::Specification.new do |gem|
   gem.name          = "rumoji"
@@ -12,8 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Transcode emoji utf-8 characters into emoji-cheat-sheet form}
   gem.homepage      = ""
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.files         = `git ls-files`.split($/).reject! { |f| f.include? 'benchmark' }
+  gem.executables   = 'rumoji'
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  gem.require_paths = ['lib']
 end
