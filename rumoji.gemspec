@@ -12,8 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Transcode emoji utf-8 characters into emoji-cheat-sheet form}
   gem.homepage      = ""
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = 'bin/rumoji'
+  gem.files         = `git ls-files`.split($/).reject! { |f| f.include? 'benchmark' }
+  gem.executables   = 'rumoji'
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 end
