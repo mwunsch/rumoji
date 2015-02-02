@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'benchmark'
+$: << '../lib'
+
+require 'rumoji'
+
+n = 5_000
+encode_str = 'Lack of cross-device emoji support makes me 😭'
+decode_str = 'But Rumoji makes encoding issues a :joy:'
+
+Benchmark.bm(7) do |x|
+  x.report("encode:") { n.times { Rumoji.encode encode_str } }
+  x.report("decode:") { n.times { Rumoji.encode decode_str } }
+end

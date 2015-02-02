@@ -95,15 +95,3 @@ truck:                   "\U0001f69a"
 vertical_traffic_light:  "\U0001f6a6"
 warning:                 "\U000026a0"
 wedding:                 "\U0001f492"
-# Regional Indicator Symbols
-jp:                      "\U0001f1ef\U0001f1f5" # REGIONAL INDICATOR SYMBOL LETTERS JP
-kr:                      "\U0001f1f0\U0001f1f7" # REGIONAL INDICATOR SYMBOL LETTERS KR
-cn:                      "\U0001f1e8\U0001f1f3" # REGIONAL INDICATOR SYMBOL LETTERS CN
-us:                      "\U0001f1fa\U0001f1f8" # REGIONAL INDICATOR SYMBOL LETTERS US
-fr:                      "\U0001f1eb\U0001f1f7" # REGIONAL INDICATOR SYMBOL LETTERS FR
-es:                      "\U0001f1ea\U0001f1f8" # REGIONAL INDICATOR SYMBOL LETTERS ES
-it:                      "\U0001f1ee\U0001f1f9" # REGIONAL INDICATOR SYMBOL LETTERS IT
-ru:                      "\U0001f1f7\U0001f1fa" # REGIONAL INDICATOR SYMBOL LETTERS RU
-gb:                      "\U0001f1ec\U0001f1e7" # REGIONAL INDICATOR SYMBOL LETTERS GB
-uk:                      "\U0001f1ec\U0001f1e7" # REGIONAL INDICATOR SYMBOL LETTERS GB
-de:                      "\U0001f1e9\U0001f1ea" # REGIONAL INDICATOR SYMBOL LETTERS DE
