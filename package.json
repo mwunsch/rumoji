@@ -1,0 +1,27 @@
+{
+  "name": "nodemoji",
+  "version": "1.0.0",
+  "description": "Transcode emoji utf-8 characters into emoji-cheat-sheet form",
+  "main": "rumoji.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuihq/rumoji.git"
+  },
+  "keywords": [
+    "rumoji"
+  ],
+  "author": "cuihq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cuihq/rumoji/issues"
+  },
+  "homepage": "https://github.com/cuihq/rumoji",
+  "dependencies": {
+    "js-yaml": "file:../../../tmp/npm-3316-c0f4f72d/1422931826986-0.44703127909451723/c6a2320284850908f3df6fffa25bb45b97f8fae8",
+    "lodash": "^3.0.1",
+    "punycode": "^1.3.2"
+  }
+}
