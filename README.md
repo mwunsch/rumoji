@@ -53,5 +53,5 @@ _Having trouble discerning what's happening in this README?_ You might be on a d
 Thanks!
 
 ## Copyright
-Copyright (c) 2012 - 2014 Mark Wunsch. Licensed under the [MIT License](http://opensource.org/licenses/mit-license.php).
+Copyright (c) 2012 - 2015 Mark Wunsch. Licensed under the [MIT License](http://opensource.org/licenses/mit-license.php).
 
