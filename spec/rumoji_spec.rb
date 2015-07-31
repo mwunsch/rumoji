@@ -32,9 +32,13 @@ describe Rumoji do
     it "transforms a cheat-sheet code with a dash into an emoji" do
       Rumoji.decode(":non-potable_water:").must_equal @non_potable_water
     end
-    
+
     it "does not transform an arbitrary string wrapped in colons" do
       Rumoji.decode(":this-is-just-a-string:").must_equal ":this-is-just-a-string:"
+    end
+
+    it "transforms a cheat-sheet code into an emoji with line brake" do
+      Rumoji.decode(":\nabc:poop:").must_equal ":\nabc" + @poop
     end
   end
 

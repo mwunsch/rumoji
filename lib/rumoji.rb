@@ -14,7 +14,7 @@ module Rumoji
 
   # Transform a cheat-sheet code into an Emoji
   def decode(str)
-    str.gsub(/:([^s:]?[\w-]+):/) {|sym| (Emoji.find($1.intern) || sym).to_s }
+    str.gsub(/:([^\s:]?[\w-]+):/) {|sym| (Emoji.find($1.intern) || sym).to_s }
   end
 
   def encode_io(readable, writeable=StringIO.new(""))
