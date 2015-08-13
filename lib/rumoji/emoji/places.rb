@@ -98,16 +98,16 @@ module Rumoji
       self.new("\u{26a0}" , [:warning]),
       self.new("\u{1f492}", [:wedding]),
       # Regional Indicator Symbols
-      self.new("\u{1f1ef}\u{1f1f5}", [:jp], "REGIONAL INDICATOR SYMBOL LETTERS JP"),
-      self.new("\u{1f1f0}\u{1f1f7}", [:kr], "REGIONAL INDICATOR SYMBOL LETTERS KR"),
-      self.new("\u{1f1e8}\u{1f1f3}", [:cn], "REGIONAL INDICATOR SYMBOL LETTERS CN"),
-      self.new("\u{1f1fa}\u{1f1f8}", [:us], "REGIONAL INDICATOR SYMBOL LETTERS US"),
-      self.new("\u{1f1eb}\u{1f1f7}", [:fr], "REGIONAL INDICATOR SYMBOL LETTERS FR"),
-      self.new("\u{1f1ea}\u{1f1f8}", [:es], "REGIONAL INDICATOR SYMBOL LETTERS ES"),
-      self.new("\u{1f1ee}\u{1f1f9}", [:it], "REGIONAL INDICATOR SYMBOL LETTERS IT"),
-      self.new("\u{1f1f7}\u{1f1fa}", [:ru], "REGIONAL INDICATOR SYMBOL LETTERS RU"),
-      self.new("\u{1f1ec}\u{1f1e7}", [:gb, :uk], "REGIONAL INDICATOR SYMBOL LETTERS GB"),
-      self.new("\u{1f1e9}\u{1f1ea}", [:de], "REGIONAL INDICATOR SYMBOL LETTERS DE"),
+      self.new("\u{1f1ef 1f1f5}", [:jp], "REGIONAL INDICATOR SYMBOL LETTERS JP"),
+      self.new("\u{1f1f0 1f1f7}", [:kr], "REGIONAL INDICATOR SYMBOL LETTERS KR"),
+      self.new("\u{1f1e8 1f1f3}", [:cn], "REGIONAL INDICATOR SYMBOL LETTERS CN"),
+      self.new("\u{1f1fa 1f1f8}", [:us], "REGIONAL INDICATOR SYMBOL LETTERS US"),
+      self.new("\u{1f1eb 1f1f7}", [:fr], "REGIONAL INDICATOR SYMBOL LETTERS FR"),
+      self.new("\u{1f1ea 1f1f8}", [:es], "REGIONAL INDICATOR SYMBOL LETTERS ES"),
+      self.new("\u{1f1ee 1f1f9}", [:it], "REGIONAL INDICATOR SYMBOL LETTERS IT"),
+      self.new("\u{1f1f7 1f1fa}", [:ru], "REGIONAL INDICATOR SYMBOL LETTERS RU"),
+      self.new("\u{1f1ec 1f1e7}", [:gb, :uk], "REGIONAL INDICATOR SYMBOL LETTERS GB"),
+      self.new("\u{1f1e9 1f1ea}", [:de], "REGIONAL INDICATOR SYMBOL LETTERS DE"),
     ]
   end
 end

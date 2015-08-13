@@ -5,14 +5,14 @@ require 'minitest/autorun'
 
 describe Rumoji::Emoji do
   let(:symbols) { [:hankey, :poop, :shit] }
-  let(:name) { "PILE OF POO" }
+  let(:emoji_name) { "PILE OF POO" }
   let(:poo_string) { "\u{1F4A9}" }
 
   subject do 
-    Rumoji::Emoji.new(poo_string, symbols, name)
+    Rumoji::Emoji.new(poo_string, symbols, emoji_name)
   end
 
-  it("has a name") { subject.name.must_equal name }
+  it("has a name") { subject.name.must_equal emoji_name }
   it("has a cheat sheet code") { symbols.must_include subject.code[1...-1].intern } 
   it("can test if it includes a cheat sheet code") { symbols.all?{|symbol| subject.include?(symbol) }.must_equal true }
   it("converts to the emoji string") { subject.to_s.must_equal poo_string }
@@ -44,11 +44,11 @@ describe Rumoji::Emoji do
     #
     # http://www.unicode.org/versions/Unicode6.2.0/
     let(:symbol) { :us }
-    let(:name) { "REGIONAL INDICATOR SYMBOL LETTERS US" }
+    let(:emoji_name) { "REGIONAL INDICATOR SYMBOL LETTERS US" }
     let(:us_string) { "\xF0\x9F\x87\xBA\xF0\x9F\x87\xB8" }
 
     subject do 
-      Rumoji::Emoji.new(us_string, symbol, name)
+      Rumoji::Emoji.new(us_string, symbol, emoji_name)
     end
 
     it("has one symbol, representing the code") { subject.symbol.must_equal symbol }
