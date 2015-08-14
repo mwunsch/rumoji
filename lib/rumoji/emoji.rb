@@ -2,9 +2,10 @@
 module Rumoji
   class Emoji
 
-    attr_reader :name
+    attr_reader :name, :string
 
     def initialize(string, symbols, name = nil)
+      @string = string
       @codepoints = string.codepoints
       @cheat_codes = [symbols].flatten
       @name = name || @cheat_codes.first.to_s.upcase.gsub("_", " ")
@@ -23,7 +24,7 @@ module Rumoji
     end
 
     def to_s
-      codepoints.pack("U*")
+      @string
     end
 
     def hash
@@ -31,7 +32,7 @@ module Rumoji
     end
 
     def hex
-      @codepoints.map{|point| point.to_s(16).upcase }.join("-")
+      @hex ||= @codepoints.map{|point| point.to_s(16).upcase }.join("-")
     end
 
     def codepoints
@@ -50,16 +51,29 @@ module Rumoji
 
     ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS
 
+    ALL_REGEXP = Regexp.new(ALL.map(&:string).join('|'))
+
     def self.find(symbol)
       ALL.find {|emoji| emoji.include? symbol }
     end
 
+    STRING_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
+      lookup[emoji.string] = emoji
+    end
+
     def self.find_by_string(string)
-      ALL.find {|emoji| emoji.to_s == string }
+      STRING_LOOKUP[string]
+    end
+
+    CODEPOINT_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
+      emoji.codepoints.each do |codepoint|
+        lookup[codepoint] ||= []
+        lookup[codepoint] << emoji unless lookup[codepoint].include?(emoji)
+      end
     end
 
     def self.select_by_codepoint(codepoint)
-      ALL.select {|emoji| emoji.codepoints.include? codepoint }
+      CODEPOINT_LOOKUP[codepoint] || []
     end
 
     def self.find_by_codepoint(codepoint)

@@ -8,8 +8,7 @@ module Rumoji
 
   # Transform emoji into its cheat-sheet code
   def encode(str)
-    io = StringIO.new(str)
-    encode_io(io).string
+    str.gsub(Emoji::ALL_REGEXP) { |match| (emoji = Emoji.find_by_string(match)) && emoji.code || match }
   end
 
   # Transform a cheat-sheet code into an Emoji
