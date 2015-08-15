@@ -29,7 +29,7 @@ Why would you want to do this? Read this blog post: http://mwunsch.tumblr.com/po
 
     gem install rumoji
 
-Note that rumoji has only been tested in Ruby 1.9!!!
+Note that rumoji has only been tested in Rubies >= 1.9!!!
 
 ### Some examples:
 
