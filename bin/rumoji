@@ -1,6 +1,13 @@
 #!/usr/bin/env ruby
 # -*- encoding: utf-8 -*-
 
+$: << File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+
+require 'rubygems'
 require 'rumoji'
 
-Rumoji.decode_io(STDIN, STDOUT)
+if ARGV.first == 'encode'
+  Rumoji.encode_io(STDIN, STDOUT)
+else
+  Rumoji.decode_io(STDIN, STDOUT)
+end
