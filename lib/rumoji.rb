@@ -17,39 +17,9 @@ module Rumoji
   end
 
   def encode_io(readable, writeable=StringIO.new(""))
-    previous_codepoints = []
-
-    readable.each_codepoint do |codepoint|
-      possible_emoji = Emoji.select_by_codepoint(codepoint)
-
-      sequence =  if possible_emoji.empty?
-                    # If this codepoint is not part of an emoji
-                    # just write it back out, along with any previously stored codepoints.
-                    dump_codepoints_to_string(previous_codepoints << codepoint)
-                  elsif !possible_emoji.any?(&:multiple?)
-                    # If this codepoint is part of an emoji, but not one
-                    # that contains multiple codepoints, write out the
-                    # first possiblity's cheat code and the previously stored codepoints
-                    dump_codepoints_to_string(previous_codepoints) << possible_emoji.first.code
-                  else
-                    # This codepoint is a part of an emoji with multiple
-                    # codepoints, so push it onto the stack.
-                    previous_codepoints.push(codepoint)
-                    # Check and see if this completes the emoji, otherwise,
-                    # write out an empty string.
-                    if found = possible_emoji.find {|e| e.codepoints.eql?(previous_codepoints) }
-                      previous_codepoints.clear and found.code
-                    else
-                      ""
-                    end
-                  end
-
-      writeable.write sequence
+    readable.each_line do |line|
+      writeable.write encode(line)
     end
-
-    # Write any remaining codepoints.
-    writeable.write dump_codepoints_to_string(previous_codepoints) if previous_codepoints.any?
-
     writeable
   end
 
@@ -59,13 +29,4 @@ module Rumoji
     end
     writeable
   end
-
-private
-
-  def dump_codepoints_to_string(codepoints)
-    codepoints.pack("U*").tap do
-      codepoints.clear
-    end
-  end
-
 end
