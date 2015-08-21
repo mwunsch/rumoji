@@ -64,21 +64,5 @@ module Rumoji
     def self.find_by_string(string)
       STRING_LOOKUP[string]
     end
-
-    CODEPOINT_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
-      emoji.codepoints.each do |codepoint|
-        lookup[codepoint] ||= []
-        lookup[codepoint] << emoji unless lookup[codepoint].include?(emoji)
-      end
-    end
-
-    def self.select_by_codepoint(codepoint)
-      CODEPOINT_LOOKUP[codepoint] || []
-    end
-
-    def self.find_by_codepoint(codepoint)
-      ALL.find {|emoji| emoji.hex == codepoint.to_s(16).upcase }
-    end
-
   end
 end
