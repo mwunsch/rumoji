@@ -69,12 +69,5 @@ describe Rumoji::Emoji do
     it "finds an emoji from a string" do
       subject.find_by_string(smile_str).symbol.must_equal smile_sym
     end
-
-    it "finds an emoji from a codepoint" do
-      smile_str.codepoints.map do |point|
-        subject.find_by_codepoint(point).symbol.must_equal smile_sym
-      end
-    end
   end
-
 end

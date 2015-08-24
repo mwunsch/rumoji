@@ -3,4 +3,8 @@
 
 require 'rumoji'
 
-Rumoji.decode_io(STDIN, STDOUT)
+if ARGV.first == 'encode'
+  Rumoji.encode_io(STDIN, STDOUT)
+else
+  Rumoji.decode_io(STDIN, STDOUT)
+end
