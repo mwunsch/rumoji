@@ -75,7 +75,7 @@ module Rumoji
       self.new("\u{1f564}", [:clock930]),
       self.new("\u{3297}" , [:congratulations]),
       self.new("\u{1f192}", [:cool]),
-      # self.new("\u{00a9}" , [:copyright]),
+      self.new("\u{00a9}" , [:copyright]),
       self.new("\u{27b0}" , [:curly_loop]),
       self.new("\u{1f4b1}", [:currency_exchange]),
       self.new("\u{1f6c3}", [:customs]),
@@ -143,7 +143,7 @@ module Rumoji
       self.new("\u{1f518}", [:radio_button]),
       self.new("\u{267b}" , [:recycle]),
       self.new("\u{1f534}", [:red_circle]),
-      # self.new("\u{00ae}" , [:registered]),
+      self.new("\u{00ae}" , [:registered]),
       self.new("\u{1f501}", [:repeat]),
       self.new("\u{1f502}", [:repeat_one]),
       self.new("\u{1f6bb}", [:restroom]),
@@ -195,7 +195,13 @@ module Rumoji
       self.new("\u{1f533}", [:white_square_button]),
       self.new("\u{1f6ba}", [:womens]),
       self.new("\u{274c}" , [:x]),
-      self.new("\u{0030 fe0f 20e3}" , [:zero])
+      self.new("\u{0030 fe0f 20e3}" , [:zero]),
+      self.new("\u{1f3fa}", [:black_circle_record]),
+      self.new("\u{1f3f9}", [:black_square_stop]),
+      self.new("\u{1f3f8}", [:double_vertical_bar]),
+      self.new("\u{1f549}", [:om]),
+      self.new("\u{1f6d0}", [:place_worship]),
+      self.new("\u{1f54e}", [:menorah]),
     ]
   end
 end
