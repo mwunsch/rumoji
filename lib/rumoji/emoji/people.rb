@@ -93,6 +93,23 @@ module Rumoji
       self.new("\u{1F3B6}", [:notes], "MULTIPLE MUSICAL NOTES"), # "dancing notes, mood, melody"
       self.new("\u{1F3B5}", [:musical_note]), # "music, being in good mood"
       self.new("\u{1F525}", [:fire], "FIRE"),
+      self.new("\u{1F917}", [:hugging], "HUGGING FACE"),
+      self.new("\u{1F914}", [:thinking], "THINKING FACE"),
+      self.new("\u{1F644}", [:rolling_eyes], "FACE WITH ROLLING EYES"),
+      self.new("\u{1F910}", [:zipper_mouth], "ZIPPER-MOUTH FACE"),
+      self.new("\u{1F913}", [:nerd], "NERD FACE"),
+      self.new("\u{1F643}", [:upside_down], "UPSIDE-DOWN FACE"),
+      self.new("\u{1F912}", [:face_thermometer], "FACE WITH THERMOMETER"),
+      self.new("\u{1F915}", [:head_bandage], "FACE WITH HEAD-BANDAGE"),
+      self.new("\u{1F911}", [:money_mouth], "MONEY-MOUTH FACE"),
+      self.new("\u{1F916}", [:robot], "ROBOT FACE"),
+      self.new("\u{1F575}", [:sleuth], "SLEUTH OR SPY"),
+      self.new("\u{1F3CB}", [:weight_lifter], "WEIGHT LIFTER"),
+      self.new("\u{1F3CC}", [:golfer], "GOLFER"),
+      self.new("\u{1F574}", [:man_levitating], "MAN IN BUSINESS SUIT LEVITATING"),
+      self.new("\u{1F641}", [:slightly_frowning], "SLIGHTLY FROWNING FACE"),
+      self.new("\u{1F642}", [:slightly_smiling], "SLIGHTLY SMILING FACE"),
+
       # Poop
       self.new("\u{1F4A9}", [:poop, :hankey, :shit], "PILE OF POO"), # "dog dirt"
       self.new("\u{1F44D}", [:thumbsup, :"+1"], "THUMBS UP SIGN"),
@@ -148,6 +165,11 @@ module Rumoji
       self.new("\u{1F46E}", [:cop], "POLICE OFFICER"),
       self.new("\u{1F47C}", [:angel], "BABY ANGEL"),
       self.new("\u{1F478}", [:princess]),
+      self.new("\u{1F595}", [:middle_finger], "REVERSED HAND WITH MIDDLE FINGER EXTENDED"),
+      self.new("\u{1F596}", [:vulcan_salute], "RAISED HAND WITH PART BETWEEN MIDDLE AND RING FINGERS"), # vulcan salute
+      self.new("\u{1F918}", [:sign_horns], "SIGN OF THE HORNS"),
+      self.new("\u{1F590}", [:fingers_splayed], "RAISED HAND WITH FINGERS SPLAYED"),
+
       # Cats
       self.new("\u{1F63A}", [:smiley_cat], "SMILING CAT FACE WITH OPEN MOUTH"),
       self.new("\u{1F638}", [:smile_cat], "GRINNING CAT FACE WITH SMILING EYES"),
@@ -179,6 +201,17 @@ module Rumoji
       self.new("\u{1F465}", [:busts_in_silhouette]), # "accounts"
       self.new("\u{1F4AC}", [:speech_balloon]), # "comic book conversation bubble"
       self.new("\u{1F4AD}", [:thought_balloon]),
+      self.new("\u{1F5E8}", [:left_speech], "LEFT SPEECH BUBBLE"),
+      self.new("\u{1F5EF}", [:right_answer], "RIGHT ANSWER BUBBLE"),
+      self.new("\u{1F573}", [:hole], "HOLE"),
+      self.new("\u{1F576}", [:dark_sunglasses], "DARK SUNGLASSES"),
+      self.new("\u{1F5E3}", [:speaking_head]),
+      self.new("\u{1F441}", [:eye]),
+      self.new("\u{1F3FB}", [:type_1_2]),
+      self.new("\u{1F3FC}", [:type_3]),
+      self.new("\u{1F3FD}", [:type_4]),
+      self.new("\u{1F3FE}", [:type_5]),
+      self.new("\u{1F3FF}", [:type_6]),
     ]
   end
 end

@@ -15,6 +15,16 @@ module Rumoji
       self.new("\u{1F300}", [:cyclone]), # "typhoon, hurricane
       self.new("\u{1F301}", [:foggy]),
       self.new("\u{1F30A}", [:ocean], "WATER WAVE"),
+      self.new("\u{1F324}", [:sun_behind_small_cloud], "WHITE SUN WITH SMALL CLOUD"),
+      self.new("\u{1F325}", [:sun_behind_large_cloud], "WHITE SUN BEHIND CLOUD"),
+      self.new("\u{1F326}", [:sun_behind_cloud_with_rain], "WHITE SUN BEHIND CLOUD WITH RAIN"),
+      self.new("\u{1F327}", [:cloud_with_rain], "CLOUD WITH RAIN"),
+      self.new("\u{1F328}", [:cloud_with_snow], "CLOUD WITH SNOW"),
+      self.new("\u{1F329}", [:cloud_with_lightning], "CLOUD WITH LIGHTNING"),
+      self.new("\u{1F32A}", [:cloud_with_tornado], "CLOUD WITH TORNADO"),
+      self.new("\u{1F32B}", [:fog], "FOG"),
+      self.new("\u{1F32C}", [:wind_face], "WIND BLOWING FACE"),
+
       # Animals
       self.new("\u{1F431}", [:cat], "CAT FACE"),
       self.new("\u{1F436}", [:dog], "DOG FACE"),
@@ -78,6 +88,15 @@ module Rumoji
       self.new("\u{1F408}", [:cat2], "CAT"),
       self.new("\u{1F429}", [:poodle]),
       self.new("\u{1F43E}", [:paw_prints]),
+      self.new("\u{1F981}", [:lion]),
+      self.new("\u{1F984}", [:unicorn]),
+      self.new("\u{1F983}", [:turkey]),
+      self.new("\u{1F980}", [:crab]),
+      self.new("\u{1F982}", [:scorpion]),
+      self.new("\u{1f577}", [:spider]),
+      self.new("\u{1f578}", [:spider_web]),
+      self.new("\u{1f54A}", [:dove_of_peace]),
+      self.new("\u{1F43F}", [:chipmunk]),
       # Flowers
       self.new("\u{1F490}", [:bouquet]),
       self.new("\u{1F338}", [:cherry_blossom]),
@@ -101,6 +120,7 @@ module Rumoji
       self.new("\u{1F33E}", [:ear_of_rice]),
       self.new("\u{1F41A}", [:shell], "SPIRAL SHELL"),
       self.new("\u{1F310}", [:globe_with_meridians]), # "used to indicate international input source, world clocks with time zones, etc."
+      self.new("\u{1F3F5}", [:rosette]),
       # Moon
       self.new("\u{1F31E}", [:sun_with_face]),
       self.new("\u{1F31D}", [:full_moon_with_face]),
