@@ -6,9 +6,13 @@ Why would you want to do this? Read this blog post: http://mwunsch.tumblr.com/po
 
 ## tl;dr
 
->**Do not store emoji unicodes in your database. Store the human-friendly code and support the emoji-cheat-sheet.**
+>By doing this, you can ensure that users across devices can see the
+>author’s intention. You can always show users an image, but you can’t
+>show them a range of characters their system does not support.
 
->By doing this, you can ensure that users across devices can see the author’s intention. You can always show users an image, but you can’t show them a range of characters their system does not support.
+This gem is primarily for handling emoji characters in user-generated
+content. Depending on your technical stack, these characters could end
+up being lost.
 
 ## Usage
 
