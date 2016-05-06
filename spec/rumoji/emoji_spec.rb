@@ -62,8 +62,12 @@ describe Rumoji::Emoji do
     let(:smile_str) { "\u{1F604}" }
     let(:smile_sym) { :smile }
 
-    it "finds an emoji from cheat sheet code" do
+    it "finds an emoji from cheat sheet code symbol" do
       subject.find(smile_sym).to_s.must_equal smile_str
+    end
+
+    it "finds an emoji from cheat sheet code string" do
+      subject.find(smile_sym.to_s).to_s.must_equal smile_str
     end
 
     it "finds an emoji from a string" do
