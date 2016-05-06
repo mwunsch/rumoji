@@ -12,7 +12,11 @@ module Rumoji
     end
 
     def symbol
-      @cheat_codes.first
+      symbols.first
+    end
+
+    def symbols
+      @cheat_codes
     end
 
     def code
@@ -20,7 +24,7 @@ module Rumoji
     end
 
     def include?(symbol)
-      @cheat_codes.map(&:to_s).include? symbol.to_s
+      symbols.map(&:to_s).include? symbol.to_s
     end
 
     def to_s
@@ -53,11 +57,14 @@ module Rumoji
 
     ALL_REGEXP = Regexp.new(ALL.map(&:string).join('|'))
 
-    FIND_BY_SYMBOL_CACHE = {}
+    SYMBOL_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
+      emoji.symbols.each do |symbol|
+        lookup[symbol.to_s] = emoji
+      end
+    end
 
     def self.find(symbol)
-      symbol = symbol.to_s
-      FIND_BY_SYMBOL_CACHE[symbol] ||= ALL.find { |emoji| emoji.include? symbol }
+      SYMBOL_LOOKUP[symbol.to_s]
     end
 
     STRING_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
