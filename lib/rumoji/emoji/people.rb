@@ -212,6 +212,34 @@ module Rumoji
       self.new("\u{1F3FD}", [:type_4]),
       self.new("\u{1F3FE}", [:type_5]),
       self.new("\u{1F3FF}", [:type_6]),
+      self.new("\u{26d1}", [:helmet_with_white_cross], "HELMET WITH WHITE CROSS"),
+      self.new("\u{270d}", [:writing_hand], "WRITING HAND"),
+      self.new("\u{1f45f}", [:athletic_shoe], "ATHLETIC SHOE"),
+      self.new("\u{1f596}", [:vulcan_hand, :"spock-hand"], "RAISED HAND WITH PART BETWEEN MIDDLE AND RING FINGERS"),
+      self.new("\u{1f5e3}", [:speaking_head_in_silhouette], "SPEAKING HEAD IN SILHOUETTE"),
+      self.new("\u{26F9}", [:person_with_ball], "PERSON WITH BALL"),
+      self.new("\u{26F7}", [:skier], "SKIER"),
+      self.new("\u{1F468 200D 1F468 200D 1F466}", [:"man-man-boy"], "MAN MAN BOY"),
+      self.new("\u{1F468 200D 1F468 200D 1F466 200D 1F466}", [:"man-man-boy-boy"], "MAN MAN BOY BOY"),
+      self.new("\u{1F468 200D 1F468 200D 1F467 200D 1F466}", [:"man-man-girl-boy"], "MAN MAN GIRL BOY"),
+      self.new("\u{0000}", [:"man-man-girl-girl"], "MAN MAN GIRL GIRL"),
+      self.new("\u{1F468 200D 1F468 200D 1F467}", [:"man-man-girl"], "MAN MAN GIRL"),
+      self.new("\u{1F468 200D 1F469 200D 1F467 200D 1F467}", [:"man-woman-girl-girl"], "MAN WOMAN GIRL GIRL"),
+      self.new("\u{1F468 200D 1F469 200D 1F466 200D 1F466}", [:"man-woman-boy-boy"], "MAN WOMAN BOY BOY"),
+      self.new("\u{1F468 200D 1F469 200D 1F467}", [:"man-woman-girl"], "MAN WOMAN GIRL"),
+      self.new("\u{1F468 200D 1F469 200D 1F467 200D 1F466}", [:"man-woman-girl-boy"], "MAN WOMAN GIRL BOY"),
+      self.new("\u{1F469 200D 1F469 200D 1F466}", [:"woman-woman-boy"], "WOMAN WOMAN BOY"),
+      self.new("\u{1F469 200D 1F469 200D 1F466 200D 1F466}", [:"woman-woman-boy-boy"], "WOMAN WOMAN BOY BOY"),
+      self.new("\u{1F469 200D 1F469 200D 1F467}", [:"woman-woman-girl"], "WOMAN WOMAN GIRL"),
+      self.new("\u{1F469 200D 1F469 200D 1F467 200D 1F466}", [:"woman-woman-girl-boy"], "WOMAN WOMAN GIRL BOY"),
+      self.new("\u{1F469 200D 1F469 200D 1F467 200D 1F467}", [:"woman-woman-girl-girl"], "WOMAN WOMAN GIRL GIRL"),
+      self.new("\u{1F469 200D 2764 FE0F 200D 1F48B 200D 1F468}", [:"woman-kiss-man"], "WOMAN KISS MAN"), # ZWJ version of U+1F48F ("couple kiss")
+      self.new("\u{1F469 200D 2764 FE0F 200D 1F468}", [:"woman-heart-man"], "WOMAN HEART MAN"), # ZWJ version of U+1F491 ("couple with heart")
+      self.new("\u{1F468 200D 1F469 200D 1F466}", [:"man-woman-boy"], "MAN WOMAN BOY BOY"), # ZWJ version of U+1F46A ("family")
+      self.new("\u{1F468 200D 2764 FE0F 200D 1F468}", [:"man-heart-man"], "MAN HEART MAN"),
+      self.new("\u{1F468 200D 2764 FE0F 200D 1F48B 200D 1F468}", [:"man-kiss-man"], "MAN KISS MAN"),
+      self.new("\u{1F469 200D 2764 FE0F 200D 1F469}", [:"woman-heart-woman"], "WOMAN HEART WOMAN"),
+      self.new("\u{1F469 200D 2764 FE0F 200D 1F48B 200D 1F469}", [:"woman-kiss-woman"], "WOMAN KISS WOMAN"),
     ]
   end
 end
