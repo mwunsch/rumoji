@@ -16,7 +16,7 @@ module Rumoji
       self.new("\u{1F618}", [:kissing_heart], "FACE THROWING KISS"),
       self.new("\u{1F61A}", [:kissing_closed_eyes], "KISSING FACE WITH CLOSED EYES"),
       self.new("\u{1F633}", [:flushed], "FLUSHED FACE"),
-      self.new("\u{1F625}", [:relieved], "DISAPPOINTED BUT RELIEVED FACE"),
+      self.new("\u{1F625}", [:relieved, :disappointed_relieved], "DISAPPOINTED BUT RELIEVED FACE"),
       self.new("\u{1F60C}", [:satisfied], "RELIEVED FACE"),
       self.new("\u{1F601}", [:grin], "GRINNING FACE WITH SMILING EYES"),
       self.new("\u{1F609}", [:wink], "WINKING FACE"),
@@ -93,22 +93,22 @@ module Rumoji
       self.new("\u{1F3B6}", [:notes], "MULTIPLE MUSICAL NOTES"), # "dancing notes, mood, melody"
       self.new("\u{1F3B5}", [:musical_note]), # "music, being in good mood"
       self.new("\u{1F525}", [:fire], "FIRE"),
-      self.new("\u{1F917}", [:hugging], "HUGGING FACE"),
-      self.new("\u{1F914}", [:thinking], "THINKING FACE"),
-      self.new("\u{1F644}", [:rolling_eyes], "FACE WITH ROLLING EYES"),
-      self.new("\u{1F910}", [:zipper_mouth], "ZIPPER-MOUTH FACE"),
-      self.new("\u{1F913}", [:nerd], "NERD FACE"),
-      self.new("\u{1F643}", [:upside_down], "UPSIDE-DOWN FACE"),
-      self.new("\u{1F912}", [:face_thermometer], "FACE WITH THERMOMETER"),
-      self.new("\u{1F915}", [:head_bandage], "FACE WITH HEAD-BANDAGE"),
-      self.new("\u{1F911}", [:money_mouth], "MONEY-MOUTH FACE"),
-      self.new("\u{1F916}", [:robot], "ROBOT FACE"),
-      self.new("\u{1F575}", [:sleuth], "SLEUTH OR SPY"),
+      self.new("\u{1F917}", [:hugging, :hugging_face], "HUGGING FACE"),
+      self.new("\u{1F914}", [:thinking, :thinking_face], "THINKING FACE"),
+      self.new("\u{1F644}", [:rolling_eyes, :face_with_rolling_eyes], "FACE WITH ROLLING EYES"),
+      self.new("\u{1F910}", [:zipper_mouth, :zipper_mouth_face], "ZIPPER-MOUTH FACE"),
+      self.new("\u{1F913}", [:nerd, :nerd_face], "NERD FACE"),
+      self.new("\u{1F643}", [:upside_down, :upside_down_face], "UPSIDE-DOWN FACE"),
+      self.new("\u{1F912}", [:face_thermometer, :face_with_thermometer], "FACE WITH THERMOMETER"),
+      self.new("\u{1F915}", [:head_bandage, :face_with_head_bandage], "FACE WITH HEAD-BANDAGE"),
+      self.new("\u{1F911}", [:money_mouth, :money_mouth_face], "MONEY-MOUTH FACE"),
+      self.new("\u{1F916}", [:robot, :robot_face], "ROBOT FACE"),
+      self.new("\u{1F575}", [:sleuth, :sleuth_or_spy], "SLEUTH OR SPY"),
       self.new("\u{1F3CB}", [:weight_lifter], "WEIGHT LIFTER"),
       self.new("\u{1F3CC}", [:golfer], "GOLFER"),
-      self.new("\u{1F574}", [:man_levitating], "MAN IN BUSINESS SUIT LEVITATING"),
-      self.new("\u{1F641}", [:slightly_frowning], "SLIGHTLY FROWNING FACE"),
-      self.new("\u{1F642}", [:slightly_smiling], "SLIGHTLY SMILING FACE"),
+      self.new("\u{1F574}", [:man_levitating, :man_in_business_suit_levitating], "MAN IN BUSINESS SUIT LEVITATING"),
+      self.new("\u{1F641}", [:slightly_frowning, :slightly_frowning_face], "SLIGHTLY FROWNING FACE"),
+      self.new("\u{1F642}", [:slightly_smiling, :slightly_smiling_face], "SLIGHTLY SMILING FACE"),
 
       # Poop
       self.new("\u{1F4A9}", [:poop, :hankey, :shit], "PILE OF POO"), # "dog dirt"
@@ -141,10 +141,10 @@ module Rumoji
       self.new("\u{1F646}", [:ok_woman], "FACE WITH OK GESTURE"),
       self.new("\u{1F645}", [:no_good], "FACE WITH NO GOOD GESTURE"),
       self.new("\u{1F481}", [:information_desk_person]),
-      self.new("\u{1F64B}", [:raised_hand], "HAPPY PERSON RAISING ONE HAND"),
+      self.new("\u{1F64B}", [:raised_hand, :raising_hand], "HAPPY PERSON RAISING ONE HAND"),
       self.new("\u{1F470}", [:bride_with_veil]),
       self.new("\u{1F64E}", [:person_with_pouting_face]),
-      self.new("\u{1F64D}", [:person_frowning]),
+      self.new("\u{1F64D}", [:person_frowning, :white_frowning_face]),
       self.new("\u{1F647}", [:bow], "PERSON BOWING DEEPLY"),
       self.new("\u{1F48F}", [:couplekiss], "KISS"), # "two people kissing"
       self.new("\u{1F491}", [:couple_with_heart]),
@@ -167,8 +167,8 @@ module Rumoji
       self.new("\u{1F478}", [:princess]),
       self.new("\u{1F595}", [:middle_finger], "REVERSED HAND WITH MIDDLE FINGER EXTENDED"),
       self.new("\u{1F596}", [:vulcan_salute], "RAISED HAND WITH PART BETWEEN MIDDLE AND RING FINGERS"), # vulcan salute
-      self.new("\u{1F918}", [:sign_horns], "SIGN OF THE HORNS"),
-      self.new("\u{1F590}", [:fingers_splayed], "RAISED HAND WITH FINGERS SPLAYED"),
+      self.new("\u{1F918}", [:sign_horns, :the_horns], "SIGN OF THE HORNS"),
+      self.new("\u{1F590}", [:fingers_splayed, :raised_hand_with_fingers_splayed], "RAISED HAND WITH FINGERS SPLAYED"),
 
       # Cats
       self.new("\u{1F63A}", [:smiley_cat], "SMILING CAT FACE WITH OPEN MOUTH"),
@@ -188,7 +188,7 @@ module Rumoji
       self.new("\u{1F64A}", [:speak_no_evil], "SPEAK-NO-EVIL MONKEY"),
       self.new("\u{1F482}", [:guardsman]),
       self.new("\u{1F480}", [:skull]),
-      self.new("\u{1F463}", [:feet], "FOOTPRINTS"),
+      self.new("\u{1F463}", [:feet, :footprints], "FOOTPRINTS"),
       self.new("\u{1F444}", [:lips], "MOUTH"),
       self.new("\u{1F48B}", [:kiss], "KISS MARK"), # "lips"
       self.new("\u{1F4A7}", [:droplet]), # "represents a drop of sweat or drop of water"
