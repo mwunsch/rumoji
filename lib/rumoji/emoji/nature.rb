@@ -10,20 +10,23 @@ module Rumoji
       self.new("\u{2614}" , [:umbrella], "UMBRELLA WITH RAIN DROPS"),
       self.new("\u{2601}" , [:cloud]),
       self.new("\u{2744}" , [:snowflake]),
-      self.new("\u{26C4}" , [:snowman], "SNOWMAN WITHOUT SNOW"),
+      self.new("\u{26C4}" , [:snowman, :snowman_without_snow], "SNOWMAN WITHOUT SNOW"),
       self.new("\u{26A1}" , [:zap], "HIGH VOLTAGE SIGN"),
       self.new("\u{1F300}", [:cyclone]), # "typhoon, hurricane
       self.new("\u{1F301}", [:foggy]),
       self.new("\u{1F30A}", [:ocean], "WATER WAVE"),
-      self.new("\u{1F324}", [:sun_behind_small_cloud], "WHITE SUN WITH SMALL CLOUD"),
+      self.new("\u{1F324}", [:sun_behind_small_cloud, :mostly_sunny], "WHITE SUN WITH SMALL CLOUD"),
       self.new("\u{1F325}", [:sun_behind_large_cloud], "WHITE SUN BEHIND CLOUD"),
-      self.new("\u{1F326}", [:sun_behind_cloud_with_rain], "WHITE SUN BEHIND CLOUD WITH RAIN"),
-      self.new("\u{1F327}", [:cloud_with_rain], "CLOUD WITH RAIN"),
-      self.new("\u{1F328}", [:cloud_with_snow], "CLOUD WITH SNOW"),
-      self.new("\u{1F329}", [:cloud_with_lightning], "CLOUD WITH LIGHTNING"),
-      self.new("\u{1F32A}", [:cloud_with_tornado], "CLOUD WITH TORNADO"),
+      self.new("\u{1F326}", [:sun_behind_cloud_with_rain, :partly_sunny_rain], "WHITE SUN BEHIND CLOUD WITH RAIN"),
+      self.new("\u{1F327}", [:cloud_with_rain, :rain_cloud], "CLOUD WITH RAIN"),
+      self.new("\u{1F328}", [:cloud_with_snow, :snow_cloud], "CLOUD WITH SNOW"),
+      self.new("\u{1F329}", [:cloud_with_lightning, :lightning], "CLOUD WITH LIGHTNING"),
+      self.new("\u{1F32A}", [:cloud_with_tornado, :tornado], "CLOUD WITH TORNADO"),
       self.new("\u{1F32B}", [:fog], "FOG"),
-      self.new("\u{1F32C}", [:wind_face], "WIND BLOWING FACE"),
+      self.new("\u{1F32C}", [:wind_face, :wind_blowing_face], "WIND BLOWING FACE"),
+      self.new("\u{2603}", [:snowman_with_snow], "SNOWMAN"),
+      self.new("\u{2604}", [:comet], "COMET"),
+      self.new("\u{2618}", [:shamrock], "SHAMROCK"),
 
       # Animals
       self.new("\u{1F431}", [:cat], "CAT FACE"),
@@ -57,7 +60,7 @@ module Rumoji
       self.new("\u{1F427}", [:penguin]),
       self.new("\u{1F422}", [:turtle]),
       self.new("\u{1F41B}", [:bug]),
-      self.new("\u{1F41D}", [:honeybee]),
+      self.new("\u{1F41D}", [:honeybee, :bee]),
       self.new("\u{1F41C}", [:ant]),
       self.new("\u{1F41E}", [:beetle], "LADY BEETLE"), # "ladybird, ladybug, coccinellids"
       self.new("\u{1F40C}", [:snail]),
@@ -88,8 +91,8 @@ module Rumoji
       self.new("\u{1F408}", [:cat2], "CAT"),
       self.new("\u{1F429}", [:poodle]),
       self.new("\u{1F43E}", [:paw_prints]),
-      self.new("\u{1F981}", [:lion]),
-      self.new("\u{1F984}", [:unicorn]),
+      self.new("\u{1F981}", [:lion, :lion_face]),
+      self.new("\u{1F984}", [:unicorn, :unicorn_face]),
       self.new("\u{1F983}", [:turkey]),
       self.new("\u{1F980}", [:crab]),
       self.new("\u{1F982}", [:scorpion]),
@@ -135,13 +138,14 @@ module Rumoji
       self.new("\u{1F318}", [:waning_crescent_moon], "WANING CRESCENT MOON SYMBOL"),
       self.new("\u{1F31C}", [:last_quarter_moon_with_face]),
       self.new("\u{1F31B}", [:first_quarter_moon_with_face]),
-      self.new("\u{1F319}", [:moon], "CRESCENT MOON"), # "may indicate either the first or last quarter moon"
+      self.new("\u{1F319}", [:moon, :crescent_moon], "CRESCENT MOON"), # "may indicate either the first or last quarter moon"
       self.new("\u{1F30D}", [:earth_africa], "EARTH GLOBE EUROPE-AFRICA"),
       self.new("\u{1F30E}", [:earth_americas], "EARTH GLOBE AMERICAS"),
       self.new("\u{1F30F}", [:earth_asia], "EARTH GLOBE ASIA-AUSTRALIA"),
       self.new("\u{1F30B}", [:volcano]),
       self.new("\u{1F30C}", [:milky_way]),
-      self.new("\u{26C5}" , [:partly_sunny], "SUN BEHIND CLOUD")
+      self.new("\u{26C5}" , [:partly_sunny, :barely_sunny], "SUN BEHIND CLOUD"),
+      self.new("\u{26c8}", [:thunder_cloud_and_rain], "THUNDER CLOUD AND RAIN"),
     ]
   end
 end

@@ -27,7 +27,7 @@ describe Rumoji do
     describe "with multiple codepoints" do
       it "transforms a stream" do
         Rumoji.encode("#{@zero}").must_equal ":zero:"
-        Rumoji.encode("#{@us}").must_equal ":us:"
+        Rumoji.encode("#{@us}").must_equal ":flag-us:"
       end
 
       it "transforms a stream of many emoji" do
@@ -45,7 +45,7 @@ describe Rumoji do
       describe "with leading and trailing characters" do
         it "is able to pull multipoint emoji out of a sequence" do
           string = "An example of a multipoint emoji is the #{@us} flag."
-          Rumoji.encode(string).must_equal "An example of a multipoint emoji is the :us: flag."
+          Rumoji.encode(string).must_equal "An example of a multipoint emoji is the :flag-us: flag."
         end
       end
 
@@ -97,7 +97,7 @@ describe Rumoji do
         io1 = StringIO.new("#{@zero}")
         io2 = StringIO.new("#{@us}")
         Rumoji.encode_io(io1).string.must_equal ":zero:"
-        Rumoji.encode_io(io2).string.must_equal ":us:"
+        Rumoji.encode_io(io2).string.must_equal ":flag-us:"
       end
 
       it "transforms a stream of many emoji" do
@@ -115,7 +115,7 @@ describe Rumoji do
       describe "with leading and trailing characters" do
         it "is able to pull multipoint emoji out of a sequence" do
           io = StringIO.new("An example of a multipoint emoji is the #{@us} flag.")
-          Rumoji.encode_io(io).string.must_equal "An example of a multipoint emoji is the :us: flag."
+          Rumoji.encode_io(io).string.must_equal "An example of a multipoint emoji is the :flag-us: flag."
         end
       end
 
