@@ -80,6 +80,7 @@ module Rumoji
       self.new("\u{2728}" , [:sparkles]),
       self.new("\u{2B50}" , [:star], "WHITE MEDIUM STAR"),
       self.new("\u{1F31F}", [:star2], "GLOWING STAR"),
+      self.new("\u{1F320}", [:shooting_star], "SHOOTING STAR"),
       self.new("\u{1F4AB}", [:dizzy], "DIZZY SYMBOL"), # "circling stars, squeans"
       self.new("\u{1F4A5}", [:boom, :collision], "COLLISION SYMBOL"),
       self.new("\u{1F4A2}", [:anger], "ANGER SYMBOL"),
