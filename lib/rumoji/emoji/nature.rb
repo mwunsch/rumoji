@@ -5,7 +5,7 @@ require 'set'
 
 module Rumoji
   class Emoji
-    NATURE = Set[
+    NATURE = SortedSet[
       self.new("\u{2600}" , [:sunny], "BLACK SUN WITH RAYS"),
       self.new("\u{2614}" , [:umbrella], "UMBRELLA WITH RAIN DROPS"),
       self.new("\u{2601}" , [:cloud]),

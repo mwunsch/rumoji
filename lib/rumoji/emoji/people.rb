@@ -5,7 +5,7 @@ require 'set'
 
 module Rumoji
   class Emoji
-    PEOPLE = Set[
+    PEOPLE = SortedSet[
       self.new("\u{1F604}", [:smile, :simple_smile], "SMILING FACE WITH OPEN MOUTH AND SMILING EYES"),
       self.new("\u{1F606}", [:laughing], "SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"),
       self.new("\u{1F60A}", [:blush], "SMILING FACE WITH SMILING EYES"),

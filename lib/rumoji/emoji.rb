@@ -47,6 +47,14 @@ module Rumoji
       codepoints.size > 1
     end
 
+    # Sort by reverse alphabetical order so that longer more complex emoji are
+    # matched in the regex before their simpler components
+    # e.g. :man-man-boy: needs to come before :man: in the regex or else
+    # :man-man-boy: will never be matched
+    def <=>(other)
+      other.symbol <=> symbol
+    end
+
     autoload :PEOPLE, 'rumoji/emoji/people'
     autoload :NATURE, 'rumoji/emoji/nature'
     autoload :OBJECTS, 'rumoji/emoji/objects'

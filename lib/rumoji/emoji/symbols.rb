@@ -5,7 +5,7 @@ require 'set'
 
 module Rumoji
   class Emoji
-    SYMBOLS = Set[
+    SYMBOLS = SortedSet[
       self.new("\u{1f4af}", [:"100"]),
       self.new("\u{1f522}", [:"1234"]),
       self.new("\u{1f170}", [:a]),
