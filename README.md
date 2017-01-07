@@ -19,8 +19,11 @@ up being lost.
     Rumoji.encode(str)
     # Takes a String, transforms Emoji into cheat-sheet codes
 
+    Rumoji.encode(str) { |emoji| #your code here }
+    # Takes a String, transforms Emoji into whatever you want
+
     Rumoji.decode(str)
-    # Does the reverse
+    # Does the reverse of encode
 
     Rumoji.encode_io(read, write)
     # For an IO pipe (a read stream, and a write stream), transform Emoji from the
@@ -38,8 +41,10 @@ Note that rumoji has only been tested in Rubies >= 1.9!!!
 ### Some examples:
 
     puts Rumoji.encode("Lack of cross-device emoji support makes me 😭")
-
     #=> Lack of cross-device emoji support makes me :sob:
+
+    Rumoji.encode_io(StringIO.new("💩")).string
+    #=> ":poop:"
 
 Here's a fun file:
 
@@ -49,6 +54,37 @@ On the command line
 
     echo "But Rumoji makes encoding issues a :joy:" | ruby ./funfile.rb
     #=> But Rumoji makes encoding issues a 😂
+
+
+### Emoji methods
+
+#### .code
+
+The symbol of the emoji surrounded with colons
+
+    Rumoji.encode("😭") {|emoji| emoji.code}
+    #=> ":sob:"
+
+#### .symbol
+
+The symbol of the emoji surrounded with colons
+
+    Rumoji.encode("😭") {|emoji| emoji.code}
+    #=> "sob"
+
+#### .multiple?
+
+Returns true if the emoji is made up of multiple code points. E.g.  🇺🇸
+
+    Rumoji.encode("🇺🇸") {|emoji| emoji.multiple?}
+    #=> true
+
+#### .string
+
+The raw emoji
+
+    Rumoji.encode("😭") {|emoji| emoji.string}
+    #=> "😭"
 
 Implement the emoji codes from emoji-cheat-sheet.com using a tool like [gemoji](https://github.com/github/gemoji) along with Rumoji, and you'll easily be able to transform user input with raw emoji unicode into images you can show to all users.
 
