@@ -29,6 +29,7 @@ module Rumoji
       self.new("\u{1F634}", [:sleeping], "SLEEPING FACE"),
       self.new("\u{1F61F}", [:worried], "WORRIED FACE"),
       self.new("\u{1F626}", [:frowning], "FROWNING FACE WITH OPEN MOUTH"),
+      self.new("\u{2639}" , [:megafrown], "WHITE FROWNING FACE"),
       self.new("\u{1F627}", [:anguished], "ANGUISHED FACE"),
       self.new("\u{1F62E}", [:open_mouth], "FACE WITH OPEN MOUTH"),
       self.new("\u{1F62C}", [:grimacing], "GRIMACING FACE"),
