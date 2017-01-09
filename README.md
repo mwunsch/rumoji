@@ -67,7 +67,7 @@ The symbol of the emoji surrounded with colons
 
 #### .symbol
 
-The symbol of the emoji surrounded with colons
+The symbol of the emoji
 
     Rumoji.encode("😭") {|emoji| emoji.code}
     #=> "sob"

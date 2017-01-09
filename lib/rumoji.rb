@@ -13,8 +13,10 @@ module Rumoji
         if block_given?
           yield emoji
         else
-          emoji.code || match
+          emoji.code
         end
+      else
+        match
       end
     end
   end
