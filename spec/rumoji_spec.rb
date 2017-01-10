@@ -14,7 +14,6 @@ describe Rumoji do
 
   describe "#encode" do
     it "transforms emoji into cheat-sheet form" do
-      key = :smile
       Rumoji.encode(@smile).must_equal ":smile:"
       Rumoji.encode("#{@smile}").must_equal ":smile:"
     end
@@ -54,6 +53,24 @@ describe Rumoji do
           string = "I would like 0#{@poop}"
           Rumoji.encode(string).must_equal "I would like 0:poop:"
         end
+      end
+    end
+
+    describe "when passed a block" do
+      it "calls the block" do
+        Rumoji.encode(@smile) {|emoji| emoji.symbol}.must_equal "smile"
+        Rumoji.encode("#{@smile}") {|emoji| emoji.symbol}.must_equal "smile"
+      end
+
+      it "calls the block for each emoji" do
+        symbols = [:smile, :"flag-us"]
+        result = Rumoji.encode("#{@smile}#{@us}") do |emoji|
+          assert(emoji.class == Rumoji::Emoji)
+          symbols -= [emoji.symbol]
+          emoji.symbol
+        end
+        assert_empty(symbols)
+        result.must_equal "smileflag-us"
       end
     end
   end
@@ -124,6 +141,25 @@ describe Rumoji do
           io = StringIO.new "I would like 0#{@poop}"
           Rumoji.encode_io(io).string.must_equal "I would like 0:poop:"
         end
+      end
+    end
+
+    describe "when passed a block" do
+      it "calls the block" do
+        io = StringIO.new("I like to #{@smile}")
+        Rumoji.encode_io(io) {|emoji| emoji.symbol}.string.must_equal "I like to smile"
+      end
+
+      it "calls the block for each emoji" do
+        symbols = [:smile, :"flag-us"]
+        io = StringIO.new("first emoji: #{@smile} second: #{@us}")
+        result = Rumoji.encode_io(io) do |emoji|
+          assert(emoji.class == Rumoji::Emoji)
+          symbols -= [emoji.symbol]
+          emoji.symbol
+        end
+        assert_empty(symbols)
+        result.string.must_equal "first emoji: smile second: flag-us"
       end
     end
 
