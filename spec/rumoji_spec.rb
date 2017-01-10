@@ -185,4 +185,57 @@ describe Rumoji do
       end
     end
   end
+
+  describe "#clean" do
+    it "transforms emoji into empty string" do
+      Rumoji.clean(@smile).must_equal ''
+      Rumoji.clean("#{@smile}").must_equal ''
+    end
+
+    it "transforms markdown into empty string" do
+      markdown = ':smile:'
+      Rumoji.clean(markdown).must_equal ''
+      Rumoji.clean("#{markdown}").must_equal ''
+    end
+
+    it "transforms many emoji into empty string" do
+      text = "1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣0️⃣#️⃣"
+      Rumoji.clean(text).must_equal ''
+      Rumoji.clean("#{text}").must_equal ''
+    end
+
+    it "transforms many markdown into empty string" do
+      text = ":one::two::three::four::five::six::seven::eight::nine::zero::hash:"
+      Rumoji.clean(text).must_equal ''
+      Rumoji.clean("#{text}").must_equal ''
+    end
+
+    it "does not transform if no unicode emoji's or markdown" do
+      text = "i like #hashtags and 1direction they are the #1 band. end with 9"
+      Rumoji.clean(text).must_equal text
+    end
+
+    describe "with emoji and markdown" do
+      it "cleans both emoji and markdown" do
+        Rumoji.clean("#{@smile} :smile:", [:markdowns, :unicodes]).must_equal ' '
+      end
+
+      it "cleans both emoji and markdown on default" do
+        Rumoji.clean("#{@smile} :smile:").must_equal ' '
+      end
+
+      it "cleans only emoji" do
+        Rumoji.clean("#{@smile} :smile:", [:unicodes]).must_equal ' :smile:'
+      end
+
+      it "cleans only markdown" do
+        Rumoji.clean("#{@smile} :smile:", [:markdowns]).must_equal "#{@smile} "
+      end
+
+      it "does not clear if empty types" do
+        both = "#{@smile} :smile:"
+        Rumoji.clean(both, []).must_equal both
+      end
+    end
+  end
 end

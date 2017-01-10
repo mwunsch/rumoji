@@ -6,6 +6,8 @@ require 'stringio'
 module Rumoji
   extend self
 
+  MARKDOWN_REGEXP = /:([^\s:]?[\w-]+):/
+
   # Transform emoji into its cheat-sheet code
   def encode(str)
     str.gsub(Emoji::ALL_REGEXP) do |match|
@@ -23,7 +25,7 @@ module Rumoji
 
   # Transform a cheat-sheet code into an Emoji
   def decode(str)
-    str.gsub(/:([^\s:]?[\w-]+):/) { |match| (Emoji.find($1) || match).to_s }
+    str.gsub(MARKDOWN_REGEXP) { |match| (Emoji.find($1) || match).to_s }
   end
 
   def encode_io(readable, writeable=StringIO.new(""), &block)
@@ -38,5 +40,15 @@ module Rumoji
       writeable.write decode(line)
     end
     writeable
+  end
+
+  def clean(str, types=[:markdowns, :unicodes])
+    if types.include?(:markdowns)
+      str = str.gsub(MARKDOWN_REGEXP) { |match| (Emoji.find($1) && '' || match).to_s }
+    end
+    if types.include?(:unicodes)
+      str = str.gsub(Emoji::ALL_REGEXP) { |match| Emoji.find_by_string(match) && '' || match }
+    end
+    str
   end
 end
