@@ -5,7 +5,7 @@ require 'set'
 
 module Rumoji
   class Emoji
-    OBJECTS = Set[
+    OBJECTS = SortedSet[
       self.new("\u{1F38D}", [:bamboo], "PINE DECORATION"), # "Japanese new year's door decoration
       self.new("\u{1F49D}", [:gift_heart], "HEART WITH RIBBON"),
       self.new("\u{1F38E}", [:dolls], "JAPANESE DOLLS"), # "Japanese Hinamatsuri or girls' doll festival"

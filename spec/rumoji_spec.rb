@@ -10,6 +10,7 @@ describe Rumoji do
     @zero = "0️⃣"
     @us = "🇺🇸"
     @non_potable_water = "🚱"
+    @man_man_boy_boy = "👨‍👨‍👦‍👦"
   end
 
   describe "#encode" do
@@ -21,6 +22,12 @@ describe Rumoji do
     it "keeps codepoints that match the beginnings of multi-codepoint emoji" do
       text = "i like #hashtags and 1direction they are the #1 band. end with 9"
       Rumoji.encode(text).must_equal text
+    end
+
+    it "encodes man_man_boy_boy" do
+      text = "#{@man_man_boy_boy}"
+      Rumoji.encode(text).must_equal ":man-man-boy-boy:"
+      Rumoji.encode(text).wont_equal ":man::man::boy::boy:"
     end
 
     describe "with multiple codepoints" do
