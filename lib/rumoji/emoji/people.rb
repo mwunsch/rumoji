@@ -59,7 +59,7 @@ module Rumoji
       self.new("\u{1F60B}", [:yum], "FACE SAVOURING DELICIOUS FOOD"),
       self.new("\u{1F637}", [:mask], "FACE WITH MEDICAL MASK"),
       self.new("\u{1F60E}", [:sunglasses], "SMILING FACE WITH SUNGLASSES"),
-      self.new("\u{1F921}", [:clown], "CLOWN FACE"),
+      self.new("\u{1F921}", [:clown_face], "CLOWN FACE"),
       self.new("\u{1F635}", [:dizzy_face]),
       self.new("\u{1F47F}", [:imp]),
       self.new("\u{1F608}", [:smiling_imp], "SMILING FACE WITH HORNS"),
