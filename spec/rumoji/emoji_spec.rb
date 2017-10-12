@@ -6,7 +6,7 @@ require 'minitest/autorun'
 describe Rumoji::Emoji do
   let(:symbols) { [:hankey, :poop, :shit] }
   let(:emoji_name) { "PILE OF POO" }
-  let(:poo_string) { "\u{1F4A9}" }
+  let(:poo_string) { "💩" }
 
   subject do 
     Rumoji::Emoji.new(poo_string, symbols, emoji_name)
@@ -59,7 +59,7 @@ describe Rumoji::Emoji do
 
   describe "factory methods" do
     subject { Rumoji::Emoji }
-    let(:smile_str) { "\u{1F604}" }
+    let(:smile_str) { "😄" }
     let(:smile_sym) { :smile }
 
     it "finds an emoji from cheat sheet code symbol" do

@@ -6,7 +6,7 @@ module Rumoji
 
     def initialize(string, symbols, name = nil)
       @string = string
-      @codepoints = string.codepoints
+      @codepoints = string.unpack("U*")
       @cheat_codes = [symbols].flatten
       @name = name || @cheat_codes.first.to_s.upcase.gsub("_", " ")
     end
@@ -52,7 +52,7 @@ module Rumoji
     # e.g. :man-man-boy: needs to come before :man: in the regex or else
     # :man-man-boy: will never be matched
     def <=>(other)
-      other.symbol <=> symbol
+      other.symbol.to_s <=> symbol.to_s
     end
 
     autoload :PEOPLE, 'rumoji/emoji/people'
@@ -62,12 +62,14 @@ module Rumoji
     autoload :SYMBOLS, 'rumoji/emoji/symbols'
 
     ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS
-
+    
     ALL_REGEXP = Regexp.new(ALL.map(&:string).join('|'))
 
-    SYMBOL_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
-      emoji.symbols.each do |symbol|
-        lookup[symbol.to_s] = emoji
+    SYMBOL_LOOKUP = {}.tap do |lookup|
+      ALL.each do |emoji|
+        emoji.symbols.each do |symbol|
+          lookup[symbol.to_s] = emoji
+        end
       end
     end
 
@@ -75,8 +77,10 @@ module Rumoji
       SYMBOL_LOOKUP[symbol.to_s]
     end
 
-    STRING_LOOKUP = ALL.each.with_object({}) do |emoji, lookup|
-      lookup[emoji.string] = emoji
+    STRING_LOOKUP = {}.tap do |lookup|
+      ALL.each do |emoji|
+        lookup[emoji.string] = emoji
+      end
     end
 
     def self.find_by_string(string)
