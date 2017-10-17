@@ -334,6 +334,7 @@ module Rumoji
       self.new("\u{1f396}", [:military_medal, :medal], "MILITARY MEDAL"),
       self.new("\u{1f3c5}", [:sports_medal], "SPORTS MEDAL"),
       self.new("\u{26f8}", [:ice_skate], "ICE SKATE"),
+      self.new("\u{1f5a5}", [:desktop], "Desktop Computer"),
     ]
   end
 end
