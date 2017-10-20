@@ -111,8 +111,8 @@ module Rumoji
       self.new("\u{1F3CB}", [:weight_lifter], "WEIGHT LIFTER"),
       self.new("\u{1F3CC}", [:golfer], "GOLFER"),
       self.new("\u{1F574}", [:man_levitating, :man_in_business_suit_levitating], "MAN IN BUSINESS SUIT LEVITATING"),
-      self.new("\u{1F641}", [:slightly_frowning, :slightly_frowning_face], "SLIGHTLY FROWNING FACE"),
-      self.new("\u{1F642}", [:slightly_smiling, :slightly_smiling_face], "SLIGHTLY SMILING FACE"),
+      self.new("\u{1F641}", [:slightly_frowning, :slightly_frowning_face, :slight_frown], "SLIGHTLY FROWNING FACE"),
+      self.new("\u{1F642}", [:slightly_smiling, :slightly_smiling_face, :slight_smile], "SLIGHTLY SMILING FACE"),
 
       # Poop
       self.new("\u{1F4A9}", [:poop, :hankey, :shit], "PILE OF POO"), # "dog dirt"
