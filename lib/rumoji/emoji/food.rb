@@ -4,7 +4,7 @@ require 'set'
 module Rumoji
   class Emoji
     FOOD = SortedSet[
-      self.new("\u{1f34e}", [:apple]),
+      self.new("\u{1F34E}", [:apple]),
       self.new("\u{1f34c}", [:banana]),
       self.new("\u{1f37a}", [:beer]),
       self.new("\u{1f37b}", [:beers]),
@@ -66,7 +66,7 @@ module Rumoji
       self.new("\u{1F954}", [:potato]),
       self.new("\u{1F95A}", [:egg]),
       self.new("\u{1F95C}", [:peanuts]),
-      self.new("\u{1F953}", [:bacon]),
+      self.new("\u{1F953}", [:bacon], "BACON"),
       self.new("\u{1F950}", [:croissant]),
       self.new("\u{1F95E}", [:pancakes]),
       self.new("\u{1F957}", [:green_salad]),

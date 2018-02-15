@@ -62,7 +62,7 @@ module Rumoji
     autoload :PLACES, 'rumoji/emoji/places'
     autoload :SYMBOLS, 'rumoji/emoji/symbols'
 
-    ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS
+    ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS | FOOD
 
     ALL_REGEXP = Regexp.new(ALL.map(&:string).join('|'))
 
