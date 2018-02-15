@@ -55,6 +55,7 @@ module Rumoji
       other.symbol <=> symbol
     end
 
+    autoload :FOOD, 'rumoji/emoji/food'
     autoload :PEOPLE, 'rumoji/emoji/people'
     autoload :NATURE, 'rumoji/emoji/nature'
     autoload :OBJECTS, 'rumoji/emoji/objects'
