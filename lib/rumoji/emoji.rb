@@ -1,8 +1,4 @@
 # -*- encoding: utf-8 -*-
-
-require 'rumoji/mixin'
-require 'rumoji/extensions'
-
 module Rumoji
   class Emoji
 
