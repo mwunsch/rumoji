@@ -73,7 +73,7 @@ module Rumoji
       self.new("\u{1F959}", [:stuffed_flatbread]),
       self.new("\u{1F943}", [:tumbler_glass]),
       self.new("\u{1F942}", [:clinking_glasses]),
-      self.new("\u{1F95B}", [:glass_of_milk])
+      self.new("\u{1F95B}", [:glass_of_milk]),
     ]
   end
 end

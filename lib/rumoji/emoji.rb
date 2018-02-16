@@ -61,8 +61,9 @@ module Rumoji
     autoload :OBJECTS, 'rumoji/emoji/objects'
     autoload :PLACES, 'rumoji/emoji/places'
     autoload :SYMBOLS, 'rumoji/emoji/symbols'
+    autoload :NEWMOJI, 'rumoji/emoji/newmoji'
 
-    ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS | FOOD
+    ALL = PEOPLE | NATURE | OBJECTS | PLACES | SYMBOLS | FOOD | NEWMOJI
 
     ALL_REGEXP = Regexp.new(ALL.map(&:string).join('|'))
 
