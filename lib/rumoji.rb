@@ -6,9 +6,9 @@ require 'stringio'
 module Rumoji
   extend self
 
-  # Transform emoji into its cheat-sheet code
+  # Transform emoji into its cheat-sheet code (convert each entry to string first to handle hash values)
   def encode(str)
-    str.gsub(Emoji::ALL_REGEXP) do |match|
+    str.to_s.gsub(Emoji::ALL_REGEXP) do |match|
       if emoji = Emoji.find_by_string(match)
         if block_given?
           yield emoji
@@ -21,9 +21,9 @@ module Rumoji
     end
   end
 
-  # Transform a cheat-sheet code into an Emoji
+  # Transform a cheat-sheet code into an Emoji (convert each entry to string first to handle hash values)
   def decode(str)
-    str.gsub(/:([^\s:]?[\w-]+):/) { |match| (Emoji.find($1) || match).to_s }
+    str.to_s.gsub(/:([^\s:]?[\w-]+):/) { |match| (Emoji.find($1) || match).to_s }
   end
 
   def encode_io(readable, writeable=StringIO.new(""), &block)

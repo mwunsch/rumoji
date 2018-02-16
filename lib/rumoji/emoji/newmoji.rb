@@ -1,3 +1,6 @@
+# New Emojis. Up to date with emoji-js.json as of 2/16/2018
+# TODO: Recategorize emojis to the appropriate files.
+
 require 'rumoji/emoji'
 require 'set'
 
