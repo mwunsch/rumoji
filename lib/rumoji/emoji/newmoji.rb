@@ -4,7 +4,7 @@ require 'set'
 module Rumoji
   class Emoji
     NEWMOJI = SortedSet[
-      self.new("\u{002A FE0F 20E3}", [:keycap_star]),
+      self.new(Regexp.escape("\u{002A FE0F 20E3}"), [:keycap_star]),
       self.new("\u{1F1FA 1F1F3}", [:"flag-un"]),
       self.new("\u{1F324 FE0F}", [:sun_small_cloud]),
       self.new("\u{1F325 FE0F}", [:sun_behind_cloud]),
