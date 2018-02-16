@@ -1,9 +1,6 @@
 # -*- encoding: utf-8 -*-
 require "rumoji/version"
 require "rumoji/emoji"
-require "rumoji/extensions"
-require "rumoji/mixin"
-
 require 'stringio'
 
 module Rumoji
