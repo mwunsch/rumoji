@@ -100,6 +100,14 @@ module Rumoji
       self.new("\u{1f578}", [:spider_web]),
       self.new("\u{1f54A}", [:dove_of_peace]),
       self.new("\u{1F43F}", [:chipmunk]),
+      self.new("\u{1F986}", [:duck]),
+      self.new("\u{1F988}", [:shark]),
+      self.new("\u{1F98E}", [:lizard]),
+      self.new("\u{1F990}", [:shrimp]),
+      self.new("\u{1F991}", [:squid]),
+      self.new("\u{1F997}", [:cricket]),
+      self.new("\u{1F99E}", [:lobster]),
+
       # Flowers
       self.new("\u{1F490}", [:bouquet]),
       self.new("\u{1F338}", [:cherry_blossom]),
@@ -146,6 +154,7 @@ module Rumoji
       self.new("\u{1F30C}", [:milky_way]),
       self.new("\u{26C5}" , [:partly_sunny, :barely_sunny], "SUN BEHIND CLOUD"),
       self.new("\u{26c8}", [:thunder_cloud_and_rain], "THUNDER CLOUD AND RAIN"),
+
     ]
   end
 end
