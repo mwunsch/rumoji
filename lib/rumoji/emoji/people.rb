@@ -112,7 +112,7 @@ module Rumoji
       self.new("\u{1F574}", [:man_levitating, :man_in_business_suit_levitating], "MAN IN BUSINESS SUIT LEVITATING"),
       self.new("\u{1F641}", [:slightly_frowning, :slightly_frowning_face], "SLIGHTLY FROWNING FACE"),
       self.new("\u{1F642}", [:slightly_smiling, :slightly_smiling_face], "SLIGHTLY SMILING FACE"),
-
+      self.new("\u{1F920}", [:face_with_cowboy_hat], "COWBOY HAT FACE"),
       # Poop
       self.new("\u{1F4A9}", [:poop, :hankey, :shit], "PILE OF POO"), # "dog dirt"
       self.new("\u{1F44D}", [:thumbsup, :"+1"], "THUMBS UP SIGN"),
