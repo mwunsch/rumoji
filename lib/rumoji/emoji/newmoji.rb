@@ -172,7 +172,7 @@ module Rumoji
       self.new("\u{1F92C}", [:serious_face_with_symbols_covering_mouth]),
       self.new("\u{1F92D}", [:smiling_face_with_smiling_eyes_and_hand_covering_mouth]),
       self.new("\u{1F92E}", [:face_with_open_mouth_vomiting]),
-      self.new("\u{1F92F}", [:shocked_face_with_exploding_head]),
+      self.new("\u{1F92F}", [:exploding_head, :shocked_face_with_exploding_head]),
       self.new("\u{1F930}", [:pregnant_woman]),
       self.new("\u{1F931}", [:"breast-feeding"]),
       self.new("\u{1F932}", [:palms_up_together]),

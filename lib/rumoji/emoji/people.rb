@@ -171,7 +171,7 @@ module Rumoji
       self.new("\u{1F478}", [:princess]),
       self.new("\u{1F595}", [:middle_finger], "REVERSED HAND WITH MIDDLE FINGER EXTENDED"),
       self.new("\u{1F596}", [:vulcan_salute], "RAISED HAND WITH PART BETWEEN MIDDLE AND RING FINGERS"), # vulcan salute
-      self.new("\u{1F918}", [:sign_horns, :the_horns], "SIGN OF THE HORNS"),
+      self.new("\u{1F918}", [:metal, :sign_horns, :the_horns], "SIGN OF THE HORNS"),
       self.new("\u{1F590}", [:fingers_splayed, :raised_hand_with_fingers_splayed], "RAISED HAND WITH FINGERS SPLAYED"),
 
       # Cats
