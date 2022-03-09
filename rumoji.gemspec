@@ -12,6 +12,10 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Transcode emoji utf-8 characters into emoji-cheat-sheet form}
   gem.homepage      = ""
 
+  if RUBY_VERSION >= '3.0'
+    gem.add_dependency "sorted_set"
+  end
+
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
